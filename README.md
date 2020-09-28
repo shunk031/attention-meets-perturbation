@@ -1,6 +1,6 @@
 # Attention Meets Perturbation: Robust and Interpretable Attention with Adversarial Training
 
-[![](http://img.shields.io/badge/cs.AI-arXiv%3A2009.12064-B31B1B.svg)](http://arxiv.org/abs/2009.12064)
+[![](http://img.shields.io/badge/cs.CL-arXiv%3A2009.12064-B31B1B.svg)](http://arxiv.org/abs/2009.12064)
 ![Python 3.7](https://img.shields.io/badge/python-3.7%2B-brightgreen.svg)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Powered by AllenNLP](https://img.shields.io/badge/Powered%20by-AllenNLP-blue.svg)](https://github.com/allenai/allennlp)
