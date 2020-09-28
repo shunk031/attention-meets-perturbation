@@ -5,6 +5,10 @@
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![Powered by AllenNLP](https://img.shields.io/badge/Powered%20by-AllenNLP-blue.svg)](https://github.com/allenai/allennlp)
 
+| | |
+|------|------|
+| ![model](./.github/assets/BC-model.png)| ![Figure 1](./.github/assets/figure1.png) |
+
 **Attention Meets Perturbation: Robust and Interpretable Attention with Adversarial Training**  
 Shunsuke Kitada and Hitoshi Iyatomi
 
