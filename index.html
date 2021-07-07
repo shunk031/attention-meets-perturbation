@@ -639,7 +639,7 @@
 </div>
 <p>Attention mechanisms<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> are widely applied in natural language processing (NLP) field through deep neural networks (DNNs). As the effectiveness of attention mechanisms became apparent in various tasks<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> <sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup> <sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup> <sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup> <sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup> <sup id="fnref:7"><a href="#fn:7" class="footnote-ref" role="doc-noteref">7</a></sup>, they were applied not only to recurrent neural networks (RNNs) but also to convolutional neural networks (CNNs).
 Moreover, Transformers <sup id="fnref:8"><a href="#fn:8" class="footnote-ref" role="doc-noteref">8</a></sup> which make proactive use of attention mechanisms have also achieved excellent results.
-However, it has been pointed out that DNN models tend to be locally unstable, and even tiny perturbations to the original inputs <sup id="fnref:9"><a href="#fn:9" class="footnote-ref" role="doc-noteref">9</a></sup> or attention mechanisms can mislead the models~\cite{jain2019attention}.
+However, it has been pointed out that DNN models tend to be locally unstable, and even tiny perturbations to the original inputs <sup id="fnref:9"><a href="#fn:9" class="footnote-ref" role="doc-noteref">9</a></sup> or attention mechanisms can mislead the models <sup id="fnref:10"><a href="#fn:10" class="footnote-ref" role="doc-noteref">10</a></sup>.
 Specifically, Jain and Wallace <sup id="fnref:10"><a href="#fn:10" class="footnote-ref" role="doc-noteref">10</a></sup> used a practical bi-directional RNN (BiRNN) model to investigate the effect of attention mechanisms and reported that learned attention weights based on the model are vulnerable to perturbations.</p>
 <p>To tackle the models' vulnerability to perturbation, Goodfellow et al.<sup id="fnref:11"><a href="#fn:11" class="footnote-ref" role="doc-noteref">11</a></sup> proposed adversarial training (AT) that increases robustness by adding adversarial perturbations to the input and the training technique forcing the model to address its difficulties.
 Previous studies<sup id="fnref:11"><a href="#fn:11" class="footnote-ref" role="doc-noteref">11</a></sup> <sup id="fnref:12"><a href="#fn:12" class="footnote-ref" role="doc-noteref">12</a></sup> in the image recognition field have theoretically explained the regularization effect of AT and shown that it improves the robustness of the model for unseen images.</p>
@@ -650,7 +650,7 @@ Because our proposed AT techniques for attention mechanisms is model-independent
 Our technique can also be applied to any similarity functions for attention mechanisms, e.g, additive function <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> and scaled dot-product function <sup id="fnref:8"><a href="#fn:8" class="footnote-ref" role="doc-noteref">8</a></sup>, which is famous for calculating the similarity in attention mechanisms.</p>
 <p>To demonstrate the effects of these techniques, we evaluated them compared to several other state-of-the-art AT-based techniques <sup id="fnref:16"><a href="#fn:16" class="footnote-ref" role="doc-noteref">16</a></sup> <sup id="fnref:17"><a href="#fn:17" class="footnote-ref" role="doc-noteref">17</a></sup> with ten common datasets for different NLP tasks.
 These datasets included binary classification (BC), question answering (QA), and natural language inference (NLI).
-We also evaluated how the attention weights obtained through the proposed AT technique agreed with the word importance calculated by the gradients~\cite{simonyan2013deep}.
+We also evaluated how the attention weights obtained through the proposed AT technique agreed with the word importance calculated by the gradients <sup id="fnref:18"><a href="#fn:18" class="footnote-ref" role="doc-noteref">18</a></sup>.
 Evaluating the proposed techniques, we obtained the following findings concerning AT for attention mechanisms in NLP:</p>
 <ul>
 <li>AT for attention mechanisms improves the prediction performance of various NLP tasks.</li>
@@ -719,6 +719,9 @@ Evaluating the proposed techniques, we obtained the following findings concernin
 </li>
 <li id="fn:17" role="doc-endnote">
 <p>M. Sato, J. Suzuki, H. Shindo, and Y. Matsumoto, “Interpretable adversarial perturbation in input embedding space for text,”  in Proc. of the 27th International Joint Conference on Artificial Intelligence, ser. AAAI Press, 2018, pp. 4323–4330.&#160;<a href="#fnref:17" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:18" role="doc-endnote">
+<p>K. Simonyan, A. Vedaldi, and A. Zisserman, “Deep inside convolutional networks:  Visualising image classification models and saliency  maps,”in Proc. of the 2nd International Conference on Learning Representations, ICLR, Workshop Track Proceedings, 2013.&#160;<a href="#fnref:18" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
 </section>
