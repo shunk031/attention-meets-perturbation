@@ -1,0 +1,18 @@
+{
+  "name": "Attention Meets Perturbations",
+  "short_name": "Attention Meets Perturbations",
+  "lang": "en-us",
+  "theme_color": "#2962ff",
+  "background_color": "#2962ff",
+  "icons": [{
+    "src": "/images/icon_hu5c3c9671a4be0eb31bd1ac25d9087784_1353_192x192_fill_lanczos_center_2.png",
+    "sizes": "192x192",
+    "type": "image/png"
+    }, {
+    "src": "/images/icon_hu5c3c9671a4be0eb31bd1ac25d9087784_1353_512x512_fill_lanczos_center_2.png",
+    "sizes": "512x512",
+    "type": "image/png"
+     }],
+  "display": "standalone",
+  "start_url": "/?utm_source=web_app_manifest"
+}
