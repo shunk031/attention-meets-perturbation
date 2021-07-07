@@ -1,6 +1,6 @@
-# Attention Meets Perturbation: Robust and Interpretable Attention with Adversarial Training
+# Attention Meets Perturbations: Robust and Interpretable Attention with Adversarial Training
 
-[![CoRR preprint arXiv:2009.12064](http://img.shields.io/badge/cs.AI-arXiv%3A2009.12064-B31B1B.svg)](http://arxiv.org/abs/2009.12064)
+[![CoRR preprint arXiv:2009.12064](http://img.shields.io/badge/cs.CL-arXiv%3A2009.12064-B31B1B.svg)](http://arxiv.org/abs/2009.12064)
 [![IEEE Access](https://img.shields.io/badge/Accepted-IEEE%20Access-%2300629B%09)](https://doi.org/10.1109/ACCESS.2021.3093456)
 [![Demo Page Build](https://github.com/shunk031/attention-meets-perturbation/actions/workflows/gh-pages.yml/badge.svg)](https://github.com/shunk031/attention-meets-perturbation/actions/workflows/gh-pages.yml)
 
@@ -8,7 +8,7 @@
 |----------------------------------------|-------------------------------------------|
 | ![model](./.github/assets/BC-model.png)| ![Figure 1](./.github/assets/figure1.png) |
 
-**Attention Meets Perturbation: Robust and Interpretable Attention with Adversarial Training**  
+**Attention Meets Perturbations: Robust and Interpretable Attention with Adversarial Training**  
 Shunsuke Kitada and Hitoshi Iyatomi
 
 - Preprint: https://arxiv.org/abs/2009.12064
@@ -103,7 +103,7 @@ $ CUDA_VISIBLE_DEVICES=9 GPU=0 allennlp train \
 
 ```bibtex
 @article{kitada2020attention,
-  title   = {Attention Meets Perturbation: Robust and Interpretable Attention with Adversarial Training},
+  title   = {Attention Meets Perturbations: Robust and Interpretable Attention with Adversarial Training},
   author  = {Shunsuke Kitada and Hitoshi Iyatomi},
   journal = {IEEE Access},
   year={2021},
