@@ -2,6 +2,7 @@
 
 [![CoRR preprint arXiv:2009.12064](http://img.shields.io/badge/cs.AI-arXiv%3A2009.12064-B31B1B.svg)](http://arxiv.org/abs/2009.12064)
 [![IEEE Access](https://img.shields.io/badge/Accepted-IEEE%20Access-%2300629B%09)](https://doi.org/10.1109/ACCESS.2021.3093456)
+[![Demo Page Build](https://github.com/shunk031/attention-meets-perturbation/actions/workflows/gh-pages.yml/badge.svg)](https://github.com/shunk031/attention-meets-perturbation/actions/workflows/gh-pages.yml)
 
 |                                        |                                           |
 |----------------------------------------|-------------------------------------------|
