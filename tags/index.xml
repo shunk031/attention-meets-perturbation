@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags | Attention Meets Perturbations</title>
-    <link>/tags/</link>
-      <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://shunk031.github.io/attention-meets-perturbation/tags/</link>
+      <atom:link href="https://shunk031.github.io/attention-meets-perturbation/tags/index.xml" rel="self" type="application/rss+xml" />
     <description>Tags</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Copyright © 2021 Shunsuke Kitada and Hitoshi Iyatomi. All rights reserved. &amp;middot; Hosted on [GitHub](https://github.com/shunk031/attention-meets-perturbation).</copyright>
     <image>
-      <url>/images/icon_hu5c3c9671a4be0eb31bd1ac25d9087784_1353_512x512_fill_lanczos_center_2.png</url>
+      <url>https://shunk031.github.io/attention-meets-perturbation/images/icon_hu5c3c9671a4be0eb31bd1ac25d9087784_1353_512x512_fill_lanczos_center_2.png</url>
       <title>Tags</title>
-      <link>/tags/</link>
+      <link>https://shunk031.github.io/attention-meets-perturbation/tags/</link>
     </image>
     
   </channel>
