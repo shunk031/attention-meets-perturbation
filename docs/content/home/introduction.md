@@ -58,7 +58,7 @@ Shunsuke Kitada and Hitoshi Iyatomi
 
 Attention mechanisms[^1] are widely applied in natural language processing (NLP) field through deep neural networks (DNNs). As the effectiveness of attention mechanisms became apparent in various tasks[^2] [^3] [^4] [^5] [^6] [^7], they were applied not only to recurrent neural networks (RNNs) but also to convolutional neural networks (CNNs). 
 Moreover, Transformers [^8] which make proactive use of attention mechanisms have also achieved excellent results.
-However, it has been pointed out that DNN models tend to be locally unstable, and even tiny perturbations to the original inputs [^9] or attention mechanisms can mislead the models~\cite{jain2019attention}.
+However, it has been pointed out that DNN models tend to be locally unstable, and even tiny perturbations to the original inputs [^9] or attention mechanisms can mislead the models [^10].
 Specifically, Jain and Wallace [^10] used a practical bi-directional RNN (BiRNN) model to investigate the effect of attention mechanisms and reported that learned attention weights based on the model are vulnerable to perturbations.
 
 To tackle the models' vulnerability to perturbation, Goodfellow et al.[^11] proposed adversarial training (AT) that increases robustness by adding adversarial perturbations to the input and the training technique forcing the model to address its difficulties. 
@@ -72,7 +72,7 @@ Our technique can also be applied to any similarity functions for attention mech
 
 To demonstrate the effects of these techniques, we evaluated them compared to several other state-of-the-art AT-based techniques [^16] [^17] with ten common datasets for different NLP tasks. 
 These datasets included binary classification (BC), question answering (QA), and natural language inference (NLI).
-We also evaluated how the attention weights obtained through the proposed AT technique agreed with the word importance calculated by the gradients~\cite{simonyan2013deep}. 
+We also evaluated how the attention weights obtained through the proposed AT technique agreed with the word importance calculated by the gradients [^18]. 
 Evaluating the proposed techniques, we obtained the following findings concerning AT for attention mechanisms in NLP:
 - AT for attention mechanisms improves the prediction performance of various NLP tasks.
 - AT for attention mechanisms helps the model learn cleaner attention and demonstrates a stronger correlation with the word importance calculated from the model gradients.
@@ -116,4 +116,4 @@ Especially, our Attention iAT demonstrated the best performance in nine out of t
 
 [^17]: M. Sato, J. Suzuki, H. Shindo, and Y. Matsumoto, “Interpretable adversarial perturbation in input embedding space for text,”  in Proc. of the 27th International Joint Conference on Artificial Intelligence, ser. AAAI Press, 2018, pp. 4323–4330.
 
-[^20]: K. Simonyan, A. Vedaldi, and A. Zisserman, “Deep inside convolutional networks:  Visualising image classification models and saliency  maps,”in Proc. of the 2nd International Conference on Learning Representations, ICLR, Workshop Track Proceedings, 2013.
+[^18]: K. Simonyan, A. Vedaldi, and A. Zisserman, “Deep inside convolutional networks:  Visualising image classification models and saliency  maps,”in Proc. of the 2nd International Conference on Learning Representations, ICLR, Workshop Track Proceedings, 2013.
