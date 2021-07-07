@@ -868,7 +868,7 @@ In our adversarial training for attention mechanisms, we compute and add the wor
 <h2 id="vanilla-vs-attention-at-vs-attention-iat">Vanilla vs. Attention AT vs. Attention iAT</h2>
 <p>Attention AT yielded clearer attention compared to the Vanilla model or Attention iAT.
 Specifically, Attention AT tended to strongly focus attention on a few words.</p>
-<table border="1" class="dataframe">
+<table class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th>Vanilla</th>
@@ -878,51 +878,325 @@ Specifically, Attention AT tended to strongly focus attention on a few words.</p
   </thead>
   <tbody>
     <tr>
-      <td><span class="barcode"; style="color: black; background-color: #fff4ee; font-size: 10px;">&nbspan&nbsp</span><span class="barcode"; style="color: black; background-color: #fff4ee; font-size: 10px;">&nbspunabashedly&nbsp</span><span class="barcode"; style="color: black; background-color: #fff4ef; font-size: 10px;">&nbspschmaltzy&nbsp</span><span class="barcode"; style="color: black; background-color: #fff3ed; font-size: 10px;">&nbspand&nbsp</span><span class="barcode"; style="color: black; background-color: #fee7db; font-size: 10px;">&nbspthoroughly&nbsp</span><span class="barcode"; style="color: black; background-color: #fb7d5d; font-size: 10px;">&nbspenjoyable&nbsp</span><span class="barcode"; style="color: black; background-color: #fcbda4; font-size: 10px;">&nbsptrue&nbsp</span><span class="barcode"; style="color: black; background-color: #fdcdb9; font-size: 10px;">&nbspstory&nbsp</span></td>
-      <td><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspan&nbsp</span><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspunabashedly&nbsp</span><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspschmaltzy&nbsp</span><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspand&nbsp</span><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspthoroughly&nbsp</span><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspenjoyable&nbsp</span><span class="barcode"; style="color: black; background-color: #fcaf93; font-size: 10px;">&nbsptrue&nbsp</span><span class="barcode"; style="color: black; background-color: #d72322; font-size: 10px;">&nbspstory&nbsp</span></td>
-      <td><span class="barcode"; style="color: black; background-color: #ffece4; font-size: 10px;">&nbspan&nbsp</span><span class="barcode"; style="color: black; background-color: #fee2d5; font-size: 10px;">&nbspunabashedly&nbsp</span><span class="barcode"; style="color: black; background-color: #feeae1; font-size: 10px;">&nbspschmaltzy&nbsp</span><span class="barcode"; style="color: black; background-color: #fff0e8; font-size: 10px;">&nbspand&nbsp</span><span class="barcode"; style="color: black; background-color: #fee3d7; font-size: 10px;">&nbspthoroughly&nbsp</span><span class="barcode"; style="color: black; background-color: #f75c41; font-size: 10px;">&nbspenjoyable&nbsp</span><span class="barcode"; style="color: black; background-color: #fee8dd; font-size: 10px;">&nbsptrue&nbsp</span><span class="barcode"; style="color: black; background-color: #fff3ed; font-size: 10px;">&nbspstory&nbsp</span></td>
+      <td><span class="barcode" ;
+          style="color: black; background-color: #fff4ee; font-size: 10px;">&nbspan&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fff4ee; font-size: 10px;">&nbspunabashedly&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #fff4ef; font-size: 10px;">&nbspschmaltzy&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fff3ed; font-size: 10px;">&nbspand&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #fee7db; font-size: 10px;">&nbspthoroughly&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #fb7d5d; font-size: 10px;">&nbspenjoyable&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fcbda4; font-size: 10px;">&nbsptrue&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fdcdb9; font-size: 10px;">&nbspstory&nbsp</span>
+      </td>
+      <td><span class="barcode" ;
+          style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspan&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspunabashedly&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspschmaltzy&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspand&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspthoroughly&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspenjoyable&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fcaf93; font-size: 10px;">&nbsptrue&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #d72322; font-size: 10px;">&nbspstory&nbsp</span>
+      </td>
+      <td><span class="barcode" ;
+          style="color: black; background-color: #ffece4; font-size: 10px;">&nbspan&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fee2d5; font-size: 10px;">&nbspunabashedly&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #feeae1; font-size: 10px;">&nbspschmaltzy&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fff0e8; font-size: 10px;">&nbspand&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #fee3d7; font-size: 10px;">&nbspthoroughly&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #f75c41; font-size: 10px;">&nbspenjoyable&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fee8dd; font-size: 10px;">&nbsptrue&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fff3ed; font-size: 10px;">&nbspstory&nbsp</span>
+      </td>
     </tr>
     <tr>
-      <td><span class="barcode"; style="color: black; background-color: #fff4ef; font-size: 10px;">&nbspone&nbsp</span><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspof&nbsp</span><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspthe&nbsp</span><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspgreatest&nbsp</span><span class="barcode"; style="color: black; background-color: #fff4ee; font-size: 10px;">&nbspromantic&nbsp</span><span class="barcode"; style="color: black; background-color: #fdccb8; font-size: 10px;">&nbspcomedies&nbsp</span><span class="barcode"; style="color: black; background-color: #fb7a5a; font-size: 10px;">&nbspof&nbsp</span><span class="barcode"; style="color: black; background-color: #fee3d7; font-size: 10px;">&nbspthe&nbsp</span><span class="barcode"; style="color: black; background-color: #fee5d8; font-size: 10px;">&nbsppast&nbsp</span><span class="barcode"; style="color: black; background-color: #fedfd0; font-size: 10px;">&nbspdecade&nbsp</span></td>
-      <td><span class="barcode"; style="color: black; background-color: #fff3ed; font-size: 10px;">&nbspone&nbsp</span><span class="barcode"; style="color: black; background-color: #fff2ec; font-size: 10px;">&nbspof&nbsp</span><span class="barcode"; style="color: black; background-color: #fff4ee; font-size: 10px;">&nbspthe&nbsp</span><span class="barcode"; style="color: black; background-color: #fedecf; font-size: 10px;">&nbspgreatest&nbsp</span><span class="barcode"; style="color: black; background-color: #fcc1a8; font-size: 10px;">&nbspromantic&nbsp</span><span class="barcode"; style="color: black; background-color: #fb7c5c; font-size: 10px;">&nbspcomedies&nbsp</span><span class="barcode"; style="color: black; background-color: #feeae0; font-size: 10px;">&nbspof&nbsp</span><span class="barcode"; style="color: black; background-color: #fff3ed; font-size: 10px;">&nbspthe&nbsp</span><span class="barcode"; style="color: black; background-color: #fff1ea; font-size: 10px;">&nbsppast&nbsp</span><span class="barcode"; style="color: black; background-color: #ffefe8; font-size: 10px;">&nbspdecade&nbsp</span></td>
-      <td><span class="barcode"; style="color: black; background-color: #fff2ec; font-size: 10px;">&nbspone&nbsp</span><span class="barcode"; style="color: black; background-color: #fff3ed; font-size: 10px;">&nbspof&nbsp</span><span class="barcode"; style="color: black; background-color: #fff2ec; font-size: 10px;">&nbspthe&nbsp</span><span class="barcode"; style="color: black; background-color: #f24633; font-size: 10px;">&nbspgreatest&nbsp</span><span class="barcode"; style="color: black; background-color: #feeae1; font-size: 10px;">&nbspromantic&nbsp</span><span class="barcode"; style="color: black; background-color: #fff2eb; font-size: 10px;">&nbspcomedies&nbsp</span><span class="barcode"; style="color: black; background-color: #fff4ee; font-size: 10px;">&nbspof&nbsp</span><span class="barcode"; style="color: black; background-color: #fff2ec; font-size: 10px;">&nbspthe&nbsp</span><span class="barcode"; style="color: black; background-color: #fee4d8; font-size: 10px;">&nbsppast&nbsp</span><span class="barcode"; style="color: black; background-color: #fedbcc; font-size: 10px;">&nbspdecade&nbsp</span></td>
+      <td><span class="barcode" ;
+          style="color: black; background-color: #fff4ef; font-size: 10px;">&nbspone&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspof&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspthe&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspgreatest&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #fff4ee; font-size: 10px;">&nbspromantic&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #fdccb8; font-size: 10px;">&nbspcomedies&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fb7a5a; font-size: 10px;">&nbspof&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fee3d7; font-size: 10px;">&nbspthe&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fee5d8; font-size: 10px;">&nbsppast&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fedfd0; font-size: 10px;">&nbspdecade&nbsp</span>
+      </td>
+      <td><span class="barcode" ;
+          style="color: black; background-color: #fff3ed; font-size: 10px;">&nbspone&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fff2ec; font-size: 10px;">&nbspof&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fff4ee; font-size: 10px;">&nbspthe&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fedecf; font-size: 10px;">&nbspgreatest&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #fcc1a8; font-size: 10px;">&nbspromantic&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #fb7c5c; font-size: 10px;">&nbspcomedies&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #feeae0; font-size: 10px;">&nbspof&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fff3ed; font-size: 10px;">&nbspthe&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fff1ea; font-size: 10px;">&nbsppast&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #ffefe8; font-size: 10px;">&nbspdecade&nbsp</span>
+      </td>
+      <td><span class="barcode" ;
+          style="color: black; background-color: #fff2ec; font-size: 10px;">&nbspone&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fff3ed; font-size: 10px;">&nbspof&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fff2ec; font-size: 10px;">&nbspthe&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #f24633; font-size: 10px;">&nbspgreatest&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #feeae1; font-size: 10px;">&nbspromantic&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #fff2eb; font-size: 10px;">&nbspcomedies&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fff4ee; font-size: 10px;">&nbspof&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fff2ec; font-size: 10px;">&nbspthe&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fee4d8; font-size: 10px;">&nbsppast&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fedbcc; font-size: 10px;">&nbspdecade&nbsp</span>
+      </td>
     </tr>
     <tr>
-      <td><span class="barcode"; style="color: black; background-color: #fff3ed; font-size: 10px;">&nbspan&nbsp</span><span class="barcode"; style="color: black; background-color: #fee6da; font-size: 10px;">&nbspoffbeat&nbsp</span><span class="barcode"; style="color: black; background-color: #fee3d6; font-size: 10px;">&nbspromantic&nbsp</span><span class="barcode"; style="color: black; background-color: #fee9df; font-size: 10px;">&nbspcomedy&nbsp</span><span class="barcode"; style="color: black; background-color: #fff0e9; font-size: 10px;">&nbspwith&nbsp</span><span class="barcode"; style="color: black; background-color: #fff0e9; font-size: 10px;">&nbspa&nbsp</span><span class="barcode"; style="color: black; background-color: #fdc7b2; font-size: 10px;">&nbspgreat&nbsp</span><span class="barcode"; style="color: black; background-color: #fee4d8; font-size: 10px;">&nbspmeet&nbsp</span><span class="barcode"; style="color: black; background-color: #fee0d2; font-size: 10px;">&nbspcute&nbsp</span><span class="barcode"; style="color: black; background-color: #fdc6b0; font-size: 10px;">&nbspgimmick&nbsp</span></td>
-      <td><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspan&nbsp</span><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspoffbeat&nbsp</span><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspromantic&nbsp</span><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspcomedy&nbsp</span><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspwith&nbsp</span><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspa&nbsp</span><span class="barcode"; style="color: black; background-color: #fc8f6f; font-size: 10px;">&nbspgreat&nbsp</span><span class="barcode"; style="color: black; background-color: #fca588; font-size: 10px;">&nbspmeet&nbsp</span><span class="barcode"; style="color: black; background-color: #fdd4c2; font-size: 10px;">&nbspcute&nbsp</span><span class="barcode"; style="color: black; background-color: #fee0d2; font-size: 10px;">&nbspgimmick&nbsp</span></td>
-      <td><span class="barcode"; style="color: black; background-color: #ffece3; font-size: 10px;">&nbspan&nbsp</span><span class="barcode"; style="color: black; background-color: #fcad90; font-size: 10px;">&nbspoffbeat&nbsp</span><span class="barcode"; style="color: black; background-color: #fff0e9; font-size: 10px;">&nbspromantic&nbsp</span><span class="barcode"; style="color: black; background-color: #fff4ef; font-size: 10px;">&nbspcomedy&nbsp</span><span class="barcode"; style="color: black; background-color: #fff4ef; font-size: 10px;">&nbspwith&nbsp</span><span class="barcode"; style="color: black; background-color: #fff2ec; font-size: 10px;">&nbspa&nbsp</span><span class="barcode"; style="color: black; background-color: #fcc2aa; font-size: 10px;">&nbspgreat&nbsp</span><span class="barcode"; style="color: black; background-color: #fee6da; font-size: 10px;">&nbspmeet&nbsp</span><span class="barcode"; style="color: black; background-color: #fdd3c1; font-size: 10px;">&nbspcute&nbsp</span><span class="barcode"; style="color: black; background-color: #fee5d8; font-size: 10px;">&nbspgimmick&nbsp</span></td>
+      <td><span class="barcode" ;
+          style="color: black; background-color: #fff3ed; font-size: 10px;">&nbspan&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fee6da; font-size: 10px;">&nbspoffbeat&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #fee3d6; font-size: 10px;">&nbspromantic&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #fee9df; font-size: 10px;">&nbspcomedy&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #fff0e9; font-size: 10px;">&nbspwith&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #fff0e9; font-size: 10px;">&nbspa&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fdc7b2; font-size: 10px;">&nbspgreat&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #fee4d8; font-size: 10px;">&nbspmeet&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #fee0d2; font-size: 10px;">&nbspcute&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #fdc6b0; font-size: 10px;">&nbspgimmick&nbsp</span></td>
+      <td><span class="barcode" ;
+          style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspan&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspoffbeat&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspromantic&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspcomedy&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspwith&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspa&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fc8f6f; font-size: 10px;">&nbspgreat&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #fca588; font-size: 10px;">&nbspmeet&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #fdd4c2; font-size: 10px;">&nbspcute&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #fee0d2; font-size: 10px;">&nbspgimmick&nbsp</span></td>
+      <td><span class="barcode" ;
+          style="color: black; background-color: #ffece3; font-size: 10px;">&nbspan&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fcad90; font-size: 10px;">&nbspoffbeat&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #fff0e9; font-size: 10px;">&nbspromantic&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #fff4ef; font-size: 10px;">&nbspcomedy&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #fff4ef; font-size: 10px;">&nbspwith&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #fff2ec; font-size: 10px;">&nbspa&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fcc2aa; font-size: 10px;">&nbspgreat&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #fee6da; font-size: 10px;">&nbspmeet&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #fdd3c1; font-size: 10px;">&nbspcute&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #fee5d8; font-size: 10px;">&nbspgimmick&nbsp</span></td>
     </tr>
     <tr>
-      <td><span class="barcode"; style="color: black; background-color: #fff3ed; font-size: 10px;">&nbspa&nbsp</span><span class="barcode"; style="color: black; background-color: #fff2eb; font-size: 10px;">&nbspfilm&nbsp</span><span class="barcode"; style="color: black; background-color: #fff3ed; font-size: 10px;">&nbspof&nbsp</span><span class="barcode"; style="color: black; background-color: #fdcdb9; font-size: 10px;">&nbspprecious&nbsp</span><span class="barcode"; style="color: black; background-color: #fc9777; font-size: 10px;">&nbspartfully&nbsp</span><span class="barcode"; style="color: black; background-color: #ffebe2; font-size: 10px;">&nbspas&nbsp</span><span class="barcode"; style="color: black; background-color: #fcbca2; font-size: 10px;">&nbspeveryday&nbsp</span><span class="barcode"; style="color: black; background-color: #fee6da; font-size: 10px;">&nbspactivities&nbsp</span></td>
-      <td><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspa&nbsp</span><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspfilm&nbsp</span><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspof&nbsp</span><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspprecious&nbsp</span><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspartfully&nbsp</span><span class="barcode"; style="color: black; background-color: #ffeee6; font-size: 10px;">&nbspas&nbsp</span><span class="barcode"; style="color: black; background-color: #fc9272; font-size: 10px;">&nbspeveryday&nbsp</span><span class="barcode"; style="color: black; background-color: #f34c37; font-size: 10px;">&nbspactivities&nbsp</span></td>
-      <td><span class="barcode"; style="color: black; background-color: #fff2eb; font-size: 10px;">&nbspa&nbsp</span><span class="barcode"; style="color: black; background-color: #fff1ea; font-size: 10px;">&nbspfilm&nbsp</span><span class="barcode"; style="color: black; background-color: #fff4ee; font-size: 10px;">&nbspof&nbsp</span><span class="barcode"; style="color: black; background-color: #fc9e80; font-size: 10px;">&nbspprecious&nbsp</span><span class="barcode"; style="color: black; background-color: #fc9373; font-size: 10px;">&nbspartfully&nbsp</span><span class="barcode"; style="color: black; background-color: #fff3ed; font-size: 10px;">&nbspas&nbsp</span><span class="barcode"; style="color: black; background-color: #fdcbb6; font-size: 10px;">&nbspeveryday&nbsp</span><span class="barcode"; style="color: black; background-color: #fff1ea; font-size: 10px;">&nbspactivities&nbsp</span></td>
+      <td><span class="barcode" ;
+          style="color: black; background-color: #fff3ed; font-size: 10px;">&nbspa&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fff2eb; font-size: 10px;">&nbspfilm&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fff3ed; font-size: 10px;">&nbspof&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fdcdb9; font-size: 10px;">&nbspprecious&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #fc9777; font-size: 10px;">&nbspartfully&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #ffebe2; font-size: 10px;">&nbspas&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #fcbca2; font-size: 10px;">&nbspeveryday&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #fee6da; font-size: 10px;">&nbspactivities&nbsp</span></td>
+      <td><span class="barcode" ;
+          style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspa&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspfilm&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspof&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspprecious&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspartfully&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #ffeee6; font-size: 10px;">&nbspas&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #fc9272; font-size: 10px;">&nbspeveryday&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #f34c37; font-size: 10px;">&nbspactivities&nbsp</span></td>
+      <td><span class="barcode" ;
+          style="color: black; background-color: #fff2eb; font-size: 10px;">&nbspa&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fff1ea; font-size: 10px;">&nbspfilm&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fff4ee; font-size: 10px;">&nbspof&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fc9e80; font-size: 10px;">&nbspprecious&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #fc9373; font-size: 10px;">&nbspartfully&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fff3ed; font-size: 10px;">&nbspas&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #fdcbb6; font-size: 10px;">&nbspeveryday&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #fff1ea; font-size: 10px;">&nbspactivities&nbsp</span></td>
     </tr>
     <tr>
-      <td><span class="barcode"; style="color: black; background-color: #fff3ed; font-size: 10px;">&nbspit&nbsp</span><span class="barcode"; style="color: black; background-color: #fff2ec; font-size: 10px;">&nbsps&nbsp</span><span class="barcode"; style="color: black; background-color: #fff2ec; font-size: 10px;">&nbspnot&nbsp</span><span class="barcode"; style="color: black; background-color: #fa6547; font-size: 10px;">&nbsphorrible&nbsp</span><span class="barcode"; style="color: black; background-color: #fff0e9; font-size: 10px;">&nbspjust&nbsp</span><span class="barcode"; style="color: black; background-color: #fdcdb9; font-size: 10px;">&nbsphorribly&nbsp</span><span class="barcode"; style="color: black; background-color: #fdc6b0; font-size: 10px;">&nbspmediocre&nbsp</span></td>
-      <td><span class="barcode"; style="color: black; background-color: #fee7db; font-size: 10px;">&nbspit&nbsp</span><span class="barcode"; style="color: black; background-color: #fedecf; font-size: 10px;">&nbsps&nbsp</span><span class="barcode"; style="color: black; background-color: #fdd5c4; font-size: 10px;">&nbspnot&nbsp</span><span class="barcode"; style="color: black; background-color: #f24734; font-size: 10px;">&nbsphorrible&nbsp</span><span class="barcode"; style="color: black; background-color: #fff4ee; font-size: 10px;">&nbspjust&nbsp</span><span class="barcode"; style="color: black; background-color: #fff3ed; font-size: 10px;">&nbsphorribly&nbsp</span><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspmediocre&nbsp</span></td>
-      <td><span class="barcode"; style="color: black; background-color: #fff0e8; font-size: 10px;">&nbspit&nbsp</span><span class="barcode"; style="color: black; background-color: #fedccd; font-size: 10px;">&nbsps&nbsp</span><span class="barcode"; style="color: black; background-color: #fdd3c1; font-size: 10px;">&nbspnot&nbsp</span><span class="barcode"; style="color: black; background-color: #fcb296; font-size: 10px;">&nbsphorrible&nbsp</span><span class="barcode"; style="color: black; background-color: #ffeee6; font-size: 10px;">&nbspjust&nbsp</span><span class="barcode"; style="color: black; background-color: #fdc7b2; font-size: 10px;">&nbsphorribly&nbsp</span><span class="barcode"; style="color: black; background-color: #fee1d3; font-size: 10px;">&nbspmediocre&nbsp</span></td>
+      <td><span class="barcode" ;
+          style="color: black; background-color: #fff3ed; font-size: 10px;">&nbspit&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fff2ec; font-size: 10px;">&nbsps&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fff2ec; font-size: 10px;">&nbspnot&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fa6547; font-size: 10px;">&nbsphorrible&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fff0e9; font-size: 10px;">&nbspjust&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #fdcdb9; font-size: 10px;">&nbsphorribly&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fdc6b0; font-size: 10px;">&nbspmediocre&nbsp</span>
+      </td>
+      <td><span class="barcode" ;
+          style="color: black; background-color: #fee7db; font-size: 10px;">&nbspit&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fedecf; font-size: 10px;">&nbsps&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fdd5c4; font-size: 10px;">&nbspnot&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #f24734; font-size: 10px;">&nbsphorrible&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fff4ee; font-size: 10px;">&nbspjust&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #fff3ed; font-size: 10px;">&nbsphorribly&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspmediocre&nbsp</span>
+      </td>
+      <td><span class="barcode" ;
+          style="color: black; background-color: #fff0e8; font-size: 10px;">&nbspit&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fedccd; font-size: 10px;">&nbsps&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fdd3c1; font-size: 10px;">&nbspnot&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fcb296; font-size: 10px;">&nbsphorrible&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #ffeee6; font-size: 10px;">&nbspjust&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #fdc7b2; font-size: 10px;">&nbsphorribly&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fee1d3; font-size: 10px;">&nbspmediocre&nbsp</span>
+      </td>
     </tr>
     <tr>
-      <td><span class="barcode"; style="color: black; background-color: #fcc3ab; font-size: 10px;">&nbspwatching&nbsp</span><span class="barcode"; style="color: black; background-color: #fff0e9; font-size: 10px;">&nbspthis&nbsp</span><span class="barcode"; style="color: black; background-color: #ffeee7; font-size: 10px;">&nbspfilm&nbsp</span><span class="barcode"; style="color: black; background-color: #fee8dd; font-size: 10px;">&nbspnearly&nbsp</span><span class="barcode"; style="color: black; background-color: #fb7c5c; font-size: 10px;">&nbspprovoked&nbsp</span><span class="barcode"; style="color: black; background-color: #fee8dd; font-size: 10px;">&nbspme&nbsp</span><span class="barcode"; style="color: black; background-color: #fff4ef; font-size: 10px;">&nbspto&nbsp</span><span class="barcode"; style="color: black; background-color: #fff4ee; font-size: 10px;">&nbsptake&nbsp</span><span class="barcode"; style="color: black; background-color: #fff2eb; font-size: 10px;">&nbspmy&nbsp</span><span class="barcode"; style="color: black; background-color: #ffeee6; font-size: 10px;">&nbspown&nbsp</span><span class="barcode"; style="color: black; background-color: #fff0e9; font-size: 10px;">&nbsplife&nbsp</span></td>
-      <td><span class="barcode"; style="color: black; background-color: #ffeee7; font-size: 10px;">&nbspwatching&nbsp</span><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspthis&nbsp</span><span class="barcode"; style="color: black; background-color: #ffefe8; font-size: 10px;">&nbspfilm&nbsp</span><span class="barcode"; style="color: black; background-color: #fcb398; font-size: 10px;">&nbspnearly&nbsp</span><span class="barcode"; style="color: black; background-color: #ea362a; font-size: 10px;">&nbspprovoked&nbsp</span><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspme&nbsp</span><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspto&nbsp</span><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbsptake&nbsp</span><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspmy&nbsp</span><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspown&nbsp</span><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbsplife&nbsp</span></td>
-      <td><span class="barcode"; style="color: black; background-color: #feeae0; font-size: 10px;">&nbspwatching&nbsp</span><span class="barcode"; style="color: black; background-color: #fff3ed; font-size: 10px;">&nbspthis&nbsp</span><span class="barcode"; style="color: black; background-color: #fff1ea; font-size: 10px;">&nbspfilm&nbsp</span><span class="barcode"; style="color: black; background-color: #ffeee7; font-size: 10px;">&nbspnearly&nbsp</span><span class="barcode"; style="color: black; background-color: #f34c37; font-size: 10px;">&nbspprovoked&nbsp</span><span class="barcode"; style="color: black; background-color: #fdd5c4; font-size: 10px;">&nbspme&nbsp</span><span class="barcode"; style="color: black; background-color: #fff2eb; font-size: 10px;">&nbspto&nbsp</span><span class="barcode"; style="color: black; background-color: #fff2ec; font-size: 10px;">&nbsptake&nbsp</span><span class="barcode"; style="color: black; background-color: #fff2ec; font-size: 10px;">&nbspmy&nbsp</span><span class="barcode"; style="color: black; background-color: #fff2ec; font-size: 10px;">&nbspown&nbsp</span><span class="barcode"; style="color: black; background-color: #fff0e8; font-size: 10px;">&nbsplife&nbsp</span></td>
+      <td><span class="barcode" ;
+          style="color: black; background-color: #fcc3ab; font-size: 10px;">&nbspwatching&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fff0e9; font-size: 10px;">&nbspthis&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #ffeee7; font-size: 10px;">&nbspfilm&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #fee8dd; font-size: 10px;">&nbspnearly&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #fb7c5c; font-size: 10px;">&nbspprovoked&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fee8dd; font-size: 10px;">&nbspme&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fff4ef; font-size: 10px;">&nbspto&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fff4ee; font-size: 10px;">&nbsptake&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fff2eb; font-size: 10px;">&nbspmy&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #ffeee6; font-size: 10px;">&nbspown&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fff0e9; font-size: 10px;">&nbsplife&nbsp</span></td>
+      <td><span class="barcode" ;
+          style="color: black; background-color: #ffeee7; font-size: 10px;">&nbspwatching&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspthis&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #ffefe8; font-size: 10px;">&nbspfilm&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #fcb398; font-size: 10px;">&nbspnearly&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #ea362a; font-size: 10px;">&nbspprovoked&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspme&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspto&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbsptake&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspmy&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspown&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbsplife&nbsp</span></td>
+      <td><span class="barcode" ;
+          style="color: black; background-color: #feeae0; font-size: 10px;">&nbspwatching&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fff3ed; font-size: 10px;">&nbspthis&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fff1ea; font-size: 10px;">&nbspfilm&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #ffeee7; font-size: 10px;">&nbspnearly&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #f34c37; font-size: 10px;">&nbspprovoked&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fdd5c4; font-size: 10px;">&nbspme&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fff2eb; font-size: 10px;">&nbspto&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fff2ec; font-size: 10px;">&nbsptake&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fff2ec; font-size: 10px;">&nbspmy&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fff2ec; font-size: 10px;">&nbspown&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fff0e8; font-size: 10px;">&nbsplife&nbsp</span></td>
     </tr>
     <tr>
-      <td><span class="barcode"; style="color: black; background-color: #fdd0bc; font-size: 10px;">&nbsptoo&nbsp</span><span class="barcode"; style="color: black; background-color: #fb7757; font-size: 10px;">&nbspbad&nbsp</span><span class="barcode"; style="color: black; background-color: #fff3ed; font-size: 10px;">&nbspthe&nbsp</span><span class="barcode"; style="color: black; background-color: #fee7db; font-size: 10px;">&nbspformer&nbsp</span><span class="barcode"; style="color: black; background-color: #ffebe2; font-size: 10px;">&nbspmurphy&nbsp</span><span class="barcode"; style="color: black; background-color: #fee7dc; font-size: 10px;">&nbspbrown&nbsp</span><span class="barcode"; style="color: black; background-color: #fff0e8; font-size: 10px;">&nbspdoes&nbsp</span><span class="barcode"; style="color: black; background-color: #fff0e9; font-size: 10px;">&nbspn&nbsp</span><span class="barcode"; style="color: black; background-color: #fff4ef; font-size: 10px;">&nbspt&nbsp</span><span class="barcode"; style="color: black; background-color: #fff4ef; font-size: 10px;">&nbsppop&nbsp</span><span class="barcode"; style="color: black; background-color: #fff2ec; font-size: 10px;">&nbspreese&nbsp</span><span class="barcode"; style="color: black; background-color: #fff2ec; font-size: 10px;">&nbspback&nbsp</span></td>
-      <td><span class="barcode"; style="color: black; background-color: #fc8b6b; font-size: 10px;">&nbsptoo&nbsp</span><span class="barcode"; style="color: black; background-color: #f14331; font-size: 10px;">&nbspbad&nbsp</span><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspthe&nbsp</span><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspformer&nbsp</span><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspmurphy&nbsp</span><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspbrown&nbsp</span><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspdoes&nbsp</span><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspn&nbsp</span><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspt&nbsp</span><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbsppop&nbsp</span><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspreese&nbsp</span><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspback&nbsp</span></td>
-      <td><span class="barcode"; style="color: black; background-color: #fdd2bf; font-size: 10px;">&nbsptoo&nbsp</span><span class="barcode"; style="color: black; background-color: #fca689; font-size: 10px;">&nbspbad&nbsp</span><span class="barcode"; style="color: black; background-color: #fff2ec; font-size: 10px;">&nbspthe&nbsp</span><span class="barcode"; style="color: black; background-color: #fee3d6; font-size: 10px;">&nbspformer&nbsp</span><span class="barcode"; style="color: black; background-color: #fff3ed; font-size: 10px;">&nbspmurphy&nbsp</span><span class="barcode"; style="color: black; background-color: #ffeee6; font-size: 10px;">&nbspbrown&nbsp</span><span class="barcode"; style="color: black; background-color: #fff0e9; font-size: 10px;">&nbspdoes&nbsp</span><span class="barcode"; style="color: black; background-color: #fcc2aa; font-size: 10px;">&nbspn&nbsp</span><span class="barcode"; style="color: black; background-color: #fff0e8; font-size: 10px;">&nbspt&nbsp</span><span class="barcode"; style="color: black; background-color: #fff4ee; font-size: 10px;">&nbsppop&nbsp</span><span class="barcode"; style="color: black; background-color: #fff4ee; font-size: 10px;">&nbspreese&nbsp</span><span class="barcode"; style="color: black; background-color: #fff4ee; font-size: 10px;">&nbspback&nbsp</span></td>
+      <td><span class="barcode" ;
+          style="color: black; background-color: #fdd0bc; font-size: 10px;">&nbsptoo&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fb7757; font-size: 10px;">&nbspbad&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fff3ed; font-size: 10px;">&nbspthe&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fee7db; font-size: 10px;">&nbspformer&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #ffebe2; font-size: 10px;">&nbspmurphy&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #fee7dc; font-size: 10px;">&nbspbrown&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #fff0e8; font-size: 10px;">&nbspdoes&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #fff0e9; font-size: 10px;">&nbspn&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fff4ef; font-size: 10px;">&nbspt&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fff4ef; font-size: 10px;">&nbsppop&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fff2ec; font-size: 10px;">&nbspreese&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #fff2ec; font-size: 10px;">&nbspback&nbsp</span></td>
+      <td><span class="barcode" ;
+          style="color: black; background-color: #fc8b6b; font-size: 10px;">&nbsptoo&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #f14331; font-size: 10px;">&nbspbad&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspthe&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspformer&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspmurphy&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspbrown&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspdoes&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspn&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspt&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fff5f0; font-size: 10px;">&nbsppop&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspreese&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspback&nbsp</span></td>
+      <td><span class="barcode" ;
+          style="color: black; background-color: #fdd2bf; font-size: 10px;">&nbsptoo&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fca689; font-size: 10px;">&nbspbad&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fff2ec; font-size: 10px;">&nbspthe&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fee3d6; font-size: 10px;">&nbspformer&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #fff3ed; font-size: 10px;">&nbspmurphy&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #ffeee6; font-size: 10px;">&nbspbrown&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #fff0e9; font-size: 10px;">&nbspdoes&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #fcc2aa; font-size: 10px;">&nbspn&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fff0e8; font-size: 10px;">&nbspt&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fff4ee; font-size: 10px;">&nbsppop&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fff4ee; font-size: 10px;">&nbspreese&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #fff4ee; font-size: 10px;">&nbspback&nbsp</span></td>
     </tr>
     <tr>
-      <td><span class="barcode"; style="color: black; background-color: #fb7c5c; font-size: 10px;">&nbspunfortunately&nbsp</span><span class="barcode"; style="color: black; background-color: #fff3ed; font-size: 10px;">&nbspthe&nbsp</span><span class="barcode"; style="color: black; background-color: #ffefe8; font-size: 10px;">&nbsppicture&nbsp</span><span class="barcode"; style="color: black; background-color: #fcaa8d; font-size: 10px;">&nbspfailed&nbsp</span><span class="barcode"; style="color: black; background-color: #fff3ed; font-size: 10px;">&nbspto&nbsp</span><span class="barcode"; style="color: black; background-color: #fee3d7; font-size: 10px;">&nbspcapture&nbsp</span><span class="barcode"; style="color: black; background-color: #fee7dc; font-size: 10px;">&nbspme&nbsp</span></td>
-      <td><span class="barcode"; style="color: black; background-color: #8e0912; font-size: 10px;">&nbspunfortunately&nbsp</span><span class="barcode"; style="color: black; background-color: #fff4ef; font-size: 10px;">&nbspthe&nbsp</span><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbsppicture&nbsp</span><span class="barcode"; style="color: black; background-color: #fee9df; font-size: 10px;">&nbspfailed&nbsp</span><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspto&nbsp</span><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspcapture&nbsp</span><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspme&nbsp</span></td>
-      <td><span class="barcode"; style="color: black; background-color: #fb7656; font-size: 10px;">&nbspunfortunately&nbsp</span><span class="barcode"; style="color: black; background-color: #fff1ea; font-size: 10px;">&nbspthe&nbsp</span><span class="barcode"; style="color: black; background-color: #fff1ea; font-size: 10px;">&nbsppicture&nbsp</span><span class="barcode"; style="color: black; background-color: #fca285; font-size: 10px;">&nbspfailed&nbsp</span><span class="barcode"; style="color: black; background-color: #fff0e9; font-size: 10px;">&nbspto&nbsp</span><span class="barcode"; style="color: black; background-color: #fee8dd; font-size: 10px;">&nbspcapture&nbsp</span><span class="barcode"; style="color: black; background-color: #ffede5; font-size: 10px;">&nbspme&nbsp</span></td>
+      <td><span class="barcode" ;
+          style="color: black; background-color: #fb7c5c; font-size: 10px;">&nbspunfortunately&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fff3ed; font-size: 10px;">&nbspthe&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #ffefe8; font-size: 10px;">&nbsppicture&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #fcaa8d; font-size: 10px;">&nbspfailed&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #fff3ed; font-size: 10px;">&nbspto&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fee3d7; font-size: 10px;">&nbspcapture&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fee7dc; font-size: 10px;">&nbspme&nbsp</span></td>
+      <td><span class="barcode" ;
+          style="color: black; background-color: #8e0912; font-size: 10px;">&nbspunfortunately&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fff4ef; font-size: 10px;">&nbspthe&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #fff5f0; font-size: 10px;">&nbsppicture&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #fee9df; font-size: 10px;">&nbspfailed&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspto&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspcapture&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspme&nbsp</span></td>
+      <td><span class="barcode" ;
+          style="color: black; background-color: #fb7656; font-size: 10px;">&nbspunfortunately&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fff1ea; font-size: 10px;">&nbspthe&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #fff1ea; font-size: 10px;">&nbsppicture&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #fca285; font-size: 10px;">&nbspfailed&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #fff0e9; font-size: 10px;">&nbspto&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fee8dd; font-size: 10px;">&nbspcapture&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #ffede5; font-size: 10px;">&nbspme&nbsp</span></td>
     </tr>
   </tbody>
 </table>
+
 <h2 id="attention-and-gradient">Attention and Gradient</h2>
 <p>Regarding the correlation of word importance based on attention weights and gradient-based word importance, Attention iAT demonstrated higher similarities than other models.</p>
 <h3 id="vanilla">Vanilla</h3>
-<table border="1" class="dataframe">
+<table class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th>Ground truth</th>
@@ -1175,7 +1449,7 @@ Specifically, Attention AT tended to strongly focus attention on a few words.</p
 </table>
 
 <h3 id="attention-at">Attention AT</h3>
-<table border="1" class="dataframe">
+<table class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th>Ground truth</th>
@@ -1190,62 +1464,245 @@ Specifically, Attention AT tended to strongly focus attention on a few words.</p
       <td>Pos.</td>
       <td>Pos.</td>
       <td>Yes</td>
-      <td><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspan&nbsp</span><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspunabashedly&nbsp</span><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspschmaltzy&nbsp</span><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspand&nbsp</span><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspthoroughly&nbsp</span><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspenjoyable&nbsp</span><span class="barcode"; style="color: black; background-color: #fcaf93; font-size: 10px;">&nbsptrue&nbsp</span><span class="barcode"; style="color: black; background-color: #d72322; font-size: 10px;">&nbspstory&nbsp</span></td>
-      <td><span class="barcode"; style="color: black; background-color: #f5fafe; font-size: 10px;">&nbspan&nbsp</span><span class="barcode"; style="color: black; background-color: #f2f7fd; font-size: 10px;">&nbspunabashedly&nbsp</span><span class="barcode"; style="color: black; background-color: #f2f8fd; font-size: 10px;">&nbspschmaltzy&nbsp</span><span class="barcode"; style="color: black; background-color: #e4eff9; font-size: 10px;">&nbspand&nbsp</span><span class="barcode"; style="color: black; background-color: #eef5fc; font-size: 10px;">&nbspthoroughly&nbsp</span><span class="barcode"; style="color: black; background-color: #69add5; font-size: 10px;">&nbspenjoyable&nbsp</span><span class="barcode"; style="color: black; background-color: #cfe1f2; font-size: 10px;">&nbsptrue&nbsp</span><span class="barcode"; style="color: black; background-color: #e7f0fa; font-size: 10px;">&nbspstory&nbsp</span></td>
+      <td><span class="barcode" ;
+          style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspan&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspunabashedly&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspschmaltzy&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspand&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspthoroughly&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspenjoyable&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fcaf93; font-size: 10px;">&nbsptrue&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #d72322; font-size: 10px;">&nbspstory&nbsp</span>
+      </td>
+      <td><span class="barcode" ;
+          style="color: black; background-color: #f5fafe; font-size: 10px;">&nbspan&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #f2f7fd; font-size: 10px;">&nbspunabashedly&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #f2f8fd; font-size: 10px;">&nbspschmaltzy&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #e4eff9; font-size: 10px;">&nbspand&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #eef5fc; font-size: 10px;">&nbspthoroughly&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #69add5; font-size: 10px;">&nbspenjoyable&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #cfe1f2; font-size: 10px;">&nbsptrue&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #e7f0fa; font-size: 10px;">&nbspstory&nbsp</span>
+      </td>
     </tr>
     <tr>
       <td>Pos.</td>
       <td>Pos.</td>
       <td>Yes</td>
-      <td><span class="barcode"; style="color: black; background-color: #fff3ed; font-size: 10px;">&nbspone&nbsp</span><span class="barcode"; style="color: black; background-color: #fff2ec; font-size: 10px;">&nbspof&nbsp</span><span class="barcode"; style="color: black; background-color: #fff4ee; font-size: 10px;">&nbspthe&nbsp</span><span class="barcode"; style="color: black; background-color: #fedecf; font-size: 10px;">&nbspgreatest&nbsp</span><span class="barcode"; style="color: black; background-color: #fcc1a8; font-size: 10px;">&nbspromantic&nbsp</span><span class="barcode"; style="color: black; background-color: #fb7c5c; font-size: 10px;">&nbspcomedies&nbsp</span><span class="barcode"; style="color: black; background-color: #feeae0; font-size: 10px;">&nbspof&nbsp</span><span class="barcode"; style="color: black; background-color: #fff3ed; font-size: 10px;">&nbspthe&nbsp</span><span class="barcode"; style="color: black; background-color: #fff1ea; font-size: 10px;">&nbsppast&nbsp</span><span class="barcode"; style="color: black; background-color: #ffefe8; font-size: 10px;">&nbspdecade&nbsp</span></td>
-      <td><span class="barcode"; style="color: black; background-color: #f6faff; font-size: 10px;">&nbspone&nbsp</span><span class="barcode"; style="color: black; background-color: #f2f8fd; font-size: 10px;">&nbspof&nbsp</span><span class="barcode"; style="color: black; background-color: #e6f0f9; font-size: 10px;">&nbspthe&nbsp</span><span class="barcode"; style="color: black; background-color: #d0e2f2; font-size: 10px;">&nbspgreatest&nbsp</span><span class="barcode"; style="color: black; background-color: #eaf2fb; font-size: 10px;">&nbspromantic&nbsp</span><span class="barcode"; style="color: black; background-color: #c1d9ed; font-size: 10px;">&nbspcomedies&nbsp</span><span class="barcode"; style="color: black; background-color: #f1f7fd; font-size: 10px;">&nbspof&nbsp</span><span class="barcode"; style="color: black; background-color: #eaf3fb; font-size: 10px;">&nbspthe&nbsp</span><span class="barcode"; style="color: black; background-color: #f6faff; font-size: 10px;">&nbsppast&nbsp</span><span class="barcode"; style="color: black; background-color: #c7dcef; font-size: 10px;">&nbspdecade&nbsp</span></td>
+      <td><span class="barcode" ;
+          style="color: black; background-color: #fff3ed; font-size: 10px;">&nbspone&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fff2ec; font-size: 10px;">&nbspof&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fff4ee; font-size: 10px;">&nbspthe&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fedecf; font-size: 10px;">&nbspgreatest&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #fcc1a8; font-size: 10px;">&nbspromantic&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #fb7c5c; font-size: 10px;">&nbspcomedies&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #feeae0; font-size: 10px;">&nbspof&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fff3ed; font-size: 10px;">&nbspthe&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fff1ea; font-size: 10px;">&nbsppast&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #ffefe8; font-size: 10px;">&nbspdecade&nbsp</span>
+      </td>
+      <td><span class="barcode" ;
+          style="color: black; background-color: #f6faff; font-size: 10px;">&nbspone&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #f2f8fd; font-size: 10px;">&nbspof&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #e6f0f9; font-size: 10px;">&nbspthe&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #d0e2f2; font-size: 10px;">&nbspgreatest&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #eaf2fb; font-size: 10px;">&nbspromantic&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #c1d9ed; font-size: 10px;">&nbspcomedies&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #f1f7fd; font-size: 10px;">&nbspof&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #eaf3fb; font-size: 10px;">&nbspthe&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #f6faff; font-size: 10px;">&nbsppast&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #c7dcef; font-size: 10px;">&nbspdecade&nbsp</span>
+      </td>
     </tr>
     <tr>
       <td>Pos.</td>
       <td>Pos.</td>
       <td>Yes</td>
-      <td><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspan&nbsp</span><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspoffbeat&nbsp</span><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspromantic&nbsp</span><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspcomedy&nbsp</span><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspwith&nbsp</span><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspa&nbsp</span><span class="barcode"; style="color: black; background-color: #fc8f6f; font-size: 10px;">&nbspgreat&nbsp</span><span class="barcode"; style="color: black; background-color: #fca588; font-size: 10px;">&nbspmeet&nbsp</span><span class="barcode"; style="color: black; background-color: #fdd4c2; font-size: 10px;">&nbspcute&nbsp</span><span class="barcode"; style="color: black; background-color: #fee0d2; font-size: 10px;">&nbspgimmick&nbsp</span></td>
-      <td><span class="barcode"; style="color: black; background-color: #f4f9fe; font-size: 10px;">&nbspan&nbsp</span><span class="barcode"; style="color: black; background-color: #d0e2f2; font-size: 10px;">&nbspoffbeat&nbsp</span><span class="barcode"; style="color: black; background-color: #ebf3fb; font-size: 10px;">&nbspromantic&nbsp</span><span class="barcode"; style="color: black; background-color: #f0f6fd; font-size: 10px;">&nbspcomedy&nbsp</span><span class="barcode"; style="color: black; background-color: #e0ecf8; font-size: 10px;">&nbspwith&nbsp</span><span class="barcode"; style="color: black; background-color: #f4f9fe; font-size: 10px;">&nbspa&nbsp</span><span class="barcode"; style="color: black; background-color: #dceaf6; font-size: 10px;">&nbspgreat&nbsp</span><span class="barcode"; style="color: black; background-color: #deebf7; font-size: 10px;">&nbspmeet&nbsp</span><span class="barcode"; style="color: black; background-color: #eaf2fb; font-size: 10px;">&nbspcute&nbsp</span><span class="barcode"; style="color: black; background-color: #cddff1; font-size: 10px;">&nbspgimmick&nbsp</span></td>
+      <td><span class="barcode" ;
+          style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspan&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspoffbeat&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspromantic&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspcomedy&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspwith&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspa&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fc8f6f; font-size: 10px;">&nbspgreat&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #fca588; font-size: 10px;">&nbspmeet&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #fdd4c2; font-size: 10px;">&nbspcute&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #fee0d2; font-size: 10px;">&nbspgimmick&nbsp</span></td>
+      <td><span class="barcode" ;
+          style="color: black; background-color: #f4f9fe; font-size: 10px;">&nbspan&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #d0e2f2; font-size: 10px;">&nbspoffbeat&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #ebf3fb; font-size: 10px;">&nbspromantic&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #f0f6fd; font-size: 10px;">&nbspcomedy&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #e0ecf8; font-size: 10px;">&nbspwith&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #f4f9fe; font-size: 10px;">&nbspa&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #dceaf6; font-size: 10px;">&nbspgreat&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #deebf7; font-size: 10px;">&nbspmeet&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #eaf2fb; font-size: 10px;">&nbspcute&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #cddff1; font-size: 10px;">&nbspgimmick&nbsp</span></td>
     </tr>
     <tr>
       <td>Pos.</td>
       <td>Pos.</td>
       <td>Yes</td>
-      <td><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspa&nbsp</span><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspfilm&nbsp</span><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspof&nbsp</span><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspprecious&nbsp</span><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspartfully&nbsp</span><span class="barcode"; style="color: black; background-color: #ffeee6; font-size: 10px;">&nbspas&nbsp</span><span class="barcode"; style="color: black; background-color: #fc9272; font-size: 10px;">&nbspeveryday&nbsp</span><span class="barcode"; style="color: black; background-color: #f34c37; font-size: 10px;">&nbspactivities&nbsp</span></td>
-      <td><span class="barcode"; style="color: black; background-color: #eef5fc; font-size: 10px;">&nbspa&nbsp</span><span class="barcode"; style="color: black; background-color: #dfebf7; font-size: 10px;">&nbspfilm&nbsp</span><span class="barcode"; style="color: black; background-color: #f5f9fe; font-size: 10px;">&nbspof&nbsp</span><span class="barcode"; style="color: black; background-color: #f3f8fe; font-size: 10px;">&nbspprecious&nbsp</span><span class="barcode"; style="color: black; background-color: #aed1e7; font-size: 10px;">&nbspartfully&nbsp</span><span class="barcode"; style="color: black; background-color: #ebf3fb; font-size: 10px;">&nbspas&nbsp</span><span class="barcode"; style="color: black; background-color: #9fcae1; font-size: 10px;">&nbspeveryday&nbsp</span><span class="barcode"; style="color: black; background-color: #f0f6fd; font-size: 10px;">&nbspactivities&nbsp</span></td>
+      <td><span class="barcode" ;
+          style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspa&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspfilm&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspof&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspprecious&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspartfully&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #ffeee6; font-size: 10px;">&nbspas&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #fc9272; font-size: 10px;">&nbspeveryday&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #f34c37; font-size: 10px;">&nbspactivities&nbsp</span></td>
+      <td><span class="barcode" ;
+          style="color: black; background-color: #eef5fc; font-size: 10px;">&nbspa&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #dfebf7; font-size: 10px;">&nbspfilm&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #f5f9fe; font-size: 10px;">&nbspof&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #f3f8fe; font-size: 10px;">&nbspprecious&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #aed1e7; font-size: 10px;">&nbspartfully&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #ebf3fb; font-size: 10px;">&nbspas&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #9fcae1; font-size: 10px;">&nbspeveryday&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #f0f6fd; font-size: 10px;">&nbspactivities&nbsp</span></td>
     </tr>
     <tr>
       <td>Neg.</td>
       <td>Neg.</td>
       <td>Yes</td>
-      <td><span class="barcode"; style="color: black; background-color: #fee7db; font-size: 10px;">&nbspit&nbsp</span><span class="barcode"; style="color: black; background-color: #fedecf; font-size: 10px;">&nbsps&nbsp</span><span class="barcode"; style="color: black; background-color: #fdd5c4; font-size: 10px;">&nbspnot&nbsp</span><span class="barcode"; style="color: black; background-color: #f24734; font-size: 10px;">&nbsphorrible&nbsp</span><span class="barcode"; style="color: black; background-color: #fff4ee; font-size: 10px;">&nbspjust&nbsp</span><span class="barcode"; style="color: black; background-color: #fff3ed; font-size: 10px;">&nbsphorribly&nbsp</span><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspmediocre&nbsp</span></td>
-      <td><span class="barcode"; style="color: black; background-color: #f0f6fd; font-size: 10px;">&nbspit&nbsp</span><span class="barcode"; style="color: black; background-color: #f7fbff; font-size: 10px;">&nbsps&nbsp</span><span class="barcode"; style="color: black; background-color: #f7fbff; font-size: 10px;">&nbspnot&nbsp</span><span class="barcode"; style="color: black; background-color: #60a7d2; font-size: 10px;">&nbsphorrible&nbsp</span><span class="barcode"; style="color: black; background-color: #f7fbff; font-size: 10px;">&nbspjust&nbsp</span><span class="barcode"; style="color: black; background-color: #dae8f6; font-size: 10px;">&nbsphorribly&nbsp</span><span class="barcode"; style="color: black; background-color: #bdd7ec; font-size: 10px;">&nbspmediocre&nbsp</span></td>
+      <td><span class="barcode" ;
+          style="color: black; background-color: #fee7db; font-size: 10px;">&nbspit&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fedecf; font-size: 10px;">&nbsps&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fdd5c4; font-size: 10px;">&nbspnot&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #f24734; font-size: 10px;">&nbsphorrible&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fff4ee; font-size: 10px;">&nbspjust&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #fff3ed; font-size: 10px;">&nbsphorribly&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspmediocre&nbsp</span>
+      </td>
+      <td><span class="barcode" ;
+          style="color: black; background-color: #f0f6fd; font-size: 10px;">&nbspit&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #f7fbff; font-size: 10px;">&nbsps&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #f7fbff; font-size: 10px;">&nbspnot&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #60a7d2; font-size: 10px;">&nbsphorrible&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #f7fbff; font-size: 10px;">&nbspjust&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #dae8f6; font-size: 10px;">&nbsphorribly&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #bdd7ec; font-size: 10px;">&nbspmediocre&nbsp</span>
+      </td>
     </tr>
     <tr>
       <td>Neg.</td>
       <td>Neg.</td>
       <td>Yes</td>
-      <td><span class="barcode"; style="color: black; background-color: #ffeee7; font-size: 10px;">&nbspwatching&nbsp</span><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspthis&nbsp</span><span class="barcode"; style="color: black; background-color: #ffefe8; font-size: 10px;">&nbspfilm&nbsp</span><span class="barcode"; style="color: black; background-color: #fcb398; font-size: 10px;">&nbspnearly&nbsp</span><span class="barcode"; style="color: black; background-color: #ea362a; font-size: 10px;">&nbspprovoked&nbsp</span><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspme&nbsp</span><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspto&nbsp</span><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbsptake&nbsp</span><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspmy&nbsp</span><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspown&nbsp</span><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbsplife&nbsp</span></td>
-      <td><span class="barcode"; style="color: black; background-color: #eaf3fb; font-size: 10px;">&nbspwatching&nbsp</span><span class="barcode"; style="color: black; background-color: #f5fafe; font-size: 10px;">&nbspthis&nbsp</span><span class="barcode"; style="color: black; background-color: #e5eff9; font-size: 10px;">&nbspfilm&nbsp</span><span class="barcode"; style="color: black; background-color: #f6faff; font-size: 10px;">&nbspnearly&nbsp</span><span class="barcode"; style="color: black; background-color: #b9d6ea; font-size: 10px;">&nbspprovoked&nbsp</span><span class="barcode"; style="color: black; background-color: #dae8f6; font-size: 10px;">&nbspme&nbsp</span><span class="barcode"; style="color: black; background-color: #f2f8fd; font-size: 10px;">&nbspto&nbsp</span><span class="barcode"; style="color: black; background-color: #e3eef8; font-size: 10px;">&nbsptake&nbsp</span><span class="barcode"; style="color: black; background-color: #e6f0f9; font-size: 10px;">&nbspmy&nbsp</span><span class="barcode"; style="color: black; background-color: #e3eef9; font-size: 10px;">&nbspown&nbsp</span><span class="barcode"; style="color: black; background-color: #e9f2fa; font-size: 10px;">&nbsplife&nbsp</span></td>
+      <td><span class="barcode" ;
+          style="color: black; background-color: #ffeee7; font-size: 10px;">&nbspwatching&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspthis&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #ffefe8; font-size: 10px;">&nbspfilm&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #fcb398; font-size: 10px;">&nbspnearly&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #ea362a; font-size: 10px;">&nbspprovoked&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspme&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspto&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbsptake&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspmy&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspown&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbsplife&nbsp</span></td>
+      <td><span class="barcode" ;
+          style="color: black; background-color: #eaf3fb; font-size: 10px;">&nbspwatching&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #f5fafe; font-size: 10px;">&nbspthis&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #e5eff9; font-size: 10px;">&nbspfilm&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #f6faff; font-size: 10px;">&nbspnearly&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #b9d6ea; font-size: 10px;">&nbspprovoked&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #dae8f6; font-size: 10px;">&nbspme&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #f2f8fd; font-size: 10px;">&nbspto&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #e3eef8; font-size: 10px;">&nbsptake&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #e6f0f9; font-size: 10px;">&nbspmy&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #e3eef9; font-size: 10px;">&nbspown&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #e9f2fa; font-size: 10px;">&nbsplife&nbsp</span></td>
     </tr>
     <tr>
       <td>Neg.</td>
       <td>Neg.</td>
       <td>Yes</td>
-      <td><span class="barcode"; style="color: black; background-color: #fc8b6b; font-size: 10px;">&nbsptoo&nbsp</span><span class="barcode"; style="color: black; background-color: #f14331; font-size: 10px;">&nbspbad&nbsp</span><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspthe&nbsp</span><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspformer&nbsp</span><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspmurphy&nbsp</span><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspbrown&nbsp</span><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspdoes&nbsp</span><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspn&nbsp</span><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspt&nbsp</span><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbsppop&nbsp</span><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspreese&nbsp</span><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspback&nbsp</span></td>
-      <td><span class="barcode"; style="color: black; background-color: #f7fbff; font-size: 10px;">&nbsptoo&nbsp</span><span class="barcode"; style="color: black; background-color: #7db8da; font-size: 10px;">&nbspbad&nbsp</span><span class="barcode"; style="color: black; background-color: #f6faff; font-size: 10px;">&nbspthe&nbsp</span><span class="barcode"; style="color: black; background-color: #dfecf7; font-size: 10px;">&nbspformer&nbsp</span><span class="barcode"; style="color: black; background-color: #ecf4fb; font-size: 10px;">&nbspmurphy&nbsp</span><span class="barcode"; style="color: black; background-color: #f5fafe; font-size: 10px;">&nbspbrown&nbsp</span><span class="barcode"; style="color: black; background-color: #edf4fc; font-size: 10px;">&nbspdoes&nbsp</span><span class="barcode"; style="color: black; background-color: #ebf3fb; font-size: 10px;">&nbspn&nbsp</span><span class="barcode"; style="color: black; background-color: #f4f9fe; font-size: 10px;">&nbspt&nbsp</span><span class="barcode"; style="color: black; background-color: #e2edf8; font-size: 10px;">&nbsppop&nbsp</span><span class="barcode"; style="color: black; background-color: #e7f1fa; font-size: 10px;">&nbspreese&nbsp</span><span class="barcode"; style="color: black; background-color: #f1f7fd; font-size: 10px;">&nbspback&nbsp</span></td>
+      <td><span class="barcode" ;
+          style="color: black; background-color: #fc8b6b; font-size: 10px;">&nbsptoo&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #f14331; font-size: 10px;">&nbspbad&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspthe&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspformer&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspmurphy&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspbrown&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspdoes&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspn&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspt&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fff5f0; font-size: 10px;">&nbsppop&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspreese&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspback&nbsp</span></td>
+      <td><span class="barcode" ;
+          style="color: black; background-color: #f7fbff; font-size: 10px;">&nbsptoo&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #7db8da; font-size: 10px;">&nbspbad&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #f6faff; font-size: 10px;">&nbspthe&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #dfecf7; font-size: 10px;">&nbspformer&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #ecf4fb; font-size: 10px;">&nbspmurphy&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #f5fafe; font-size: 10px;">&nbspbrown&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #edf4fc; font-size: 10px;">&nbspdoes&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #ebf3fb; font-size: 10px;">&nbspn&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #f4f9fe; font-size: 10px;">&nbspt&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #e2edf8; font-size: 10px;">&nbsppop&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #e7f1fa; font-size: 10px;">&nbspreese&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #f1f7fd; font-size: 10px;">&nbspback&nbsp</span></td>
     </tr>
     <tr>
       <td>Neg.</td>
       <td>Neg.</td>
       <td>Yes</td>
-      <td><span class="barcode"; style="color: black; background-color: #8e0912; font-size: 10px;">&nbspunfortunately&nbsp</span><span class="barcode"; style="color: black; background-color: #fff4ef; font-size: 10px;">&nbspthe&nbsp</span><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbsppicture&nbsp</span><span class="barcode"; style="color: black; background-color: #fee9df; font-size: 10px;">&nbspfailed&nbsp</span><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspto&nbsp</span><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspcapture&nbsp</span><span class="barcode"; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspme&nbsp</span></td>
-      <td><span class="barcode"; style="color: black; background-color: #3f8fc5; font-size: 10px;">&nbspunfortunately&nbsp</span><span class="barcode"; style="color: black; background-color: #f2f8fd; font-size: 10px;">&nbspthe&nbsp</span><span class="barcode"; style="color: black; background-color: #f4f9fe; font-size: 10px;">&nbsppicture&nbsp</span><span class="barcode"; style="color: black; background-color: #e9f2fa; font-size: 10px;">&nbspfailed&nbsp</span><span class="barcode"; style="color: black; background-color: #f1f7fd; font-size: 10px;">&nbspto&nbsp</span><span class="barcode"; style="color: black; background-color: #eef5fc; font-size: 10px;">&nbspcapture&nbsp</span><span class="barcode"; style="color: black; background-color: #d6e5f4; font-size: 10px;">&nbspme&nbsp</span></td>
+      <td><span class="barcode" ;
+          style="color: black; background-color: #8e0912; font-size: 10px;">&nbspunfortunately&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fff4ef; font-size: 10px;">&nbspthe&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #fff5f0; font-size: 10px;">&nbsppicture&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #fee9df; font-size: 10px;">&nbspfailed&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspto&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspcapture&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fff5f0; font-size: 10px;">&nbspme&nbsp</span></td>
+      <td><span class="barcode" ;
+          style="color: black; background-color: #3f8fc5; font-size: 10px;">&nbspunfortunately&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #f2f8fd; font-size: 10px;">&nbspthe&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #f4f9fe; font-size: 10px;">&nbsppicture&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #e9f2fa; font-size: 10px;">&nbspfailed&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #f1f7fd; font-size: 10px;">&nbspto&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #eef5fc; font-size: 10px;">&nbspcapture&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #d6e5f4; font-size: 10px;">&nbspme&nbsp</span></td>
     </tr>
   </tbody>
 </table>
+
 <h3 id="attention-iat">Attention iAT</h3>
-<table border="1" class="dataframe">
+<table class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th>Ground truth</th>
@@ -1260,60 +1717,243 @@ Specifically, Attention AT tended to strongly focus attention on a few words.</p
       <td>Pos.</td>
       <td>Pos.</td>
       <td>Yes</td>
-      <td><span class="barcode"; style="color: black; background-color: #ffece4; font-size: 10px;">&nbspan&nbsp</span><span class="barcode"; style="color: black; background-color: #fee2d5; font-size: 10px;">&nbspunabashedly&nbsp</span><span class="barcode"; style="color: black; background-color: #feeae1; font-size: 10px;">&nbspschmaltzy&nbsp</span><span class="barcode"; style="color: black; background-color: #fff0e8; font-size: 10px;">&nbspand&nbsp</span><span class="barcode"; style="color: black; background-color: #fee3d7; font-size: 10px;">&nbspthoroughly&nbsp</span><span class="barcode"; style="color: black; background-color: #f75c41; font-size: 10px;">&nbspenjoyable&nbsp</span><span class="barcode"; style="color: black; background-color: #fee8dd; font-size: 10px;">&nbsptrue&nbsp</span><span class="barcode"; style="color: black; background-color: #fff3ed; font-size: 10px;">&nbspstory&nbsp</span></td>
-      <td><span class="barcode"; style="color: black; background-color: #eaf3fb; font-size: 10px;">&nbspan&nbsp</span><span class="barcode"; style="color: black; background-color: #e6f0f9; font-size: 10px;">&nbspunabashedly&nbsp</span><span class="barcode"; style="color: black; background-color: #f2f7fd; font-size: 10px;">&nbspschmaltzy&nbsp</span><span class="barcode"; style="color: black; background-color: #eef5fc; font-size: 10px;">&nbspand&nbsp</span><span class="barcode"; style="color: black; background-color: #f5f9fe; font-size: 10px;">&nbspthoroughly&nbsp</span><span class="barcode"; style="color: black; background-color: #3c8cc3; font-size: 10px;">&nbspenjoyable&nbsp</span><span class="barcode"; style="color: black; background-color: #eef5fc; font-size: 10px;">&nbsptrue&nbsp</span><span class="barcode"; style="color: black; background-color: #ebf3fb; font-size: 10px;">&nbspstory&nbsp</span></td>
+      <td><span class="barcode" ;
+          style="color: black; background-color: #ffece4; font-size: 10px;">&nbspan&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fee2d5; font-size: 10px;">&nbspunabashedly&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #feeae1; font-size: 10px;">&nbspschmaltzy&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fff0e8; font-size: 10px;">&nbspand&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #fee3d7; font-size: 10px;">&nbspthoroughly&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #f75c41; font-size: 10px;">&nbspenjoyable&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fee8dd; font-size: 10px;">&nbsptrue&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fff3ed; font-size: 10px;">&nbspstory&nbsp</span>
+      </td>
+      <td><span class="barcode" ;
+          style="color: black; background-color: #eaf3fb; font-size: 10px;">&nbspan&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #e6f0f9; font-size: 10px;">&nbspunabashedly&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #f2f7fd; font-size: 10px;">&nbspschmaltzy&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #eef5fc; font-size: 10px;">&nbspand&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #f5f9fe; font-size: 10px;">&nbspthoroughly&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #3c8cc3; font-size: 10px;">&nbspenjoyable&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #eef5fc; font-size: 10px;">&nbsptrue&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #ebf3fb; font-size: 10px;">&nbspstory&nbsp</span>
+      </td>
     </tr>
     <tr>
       <td>Pos.</td>
       <td>Pos.</td>
       <td>Yes</td>
-      <td><span class="barcode"; style="color: black; background-color: #fff2ec; font-size: 10px;">&nbspone&nbsp</span><span class="barcode"; style="color: black; background-color: #fff3ed; font-size: 10px;">&nbspof&nbsp</span><span class="barcode"; style="color: black; background-color: #fff2ec; font-size: 10px;">&nbspthe&nbsp</span><span class="barcode"; style="color: black; background-color: #f24633; font-size: 10px;">&nbspgreatest&nbsp</span><span class="barcode"; style="color: black; background-color: #feeae1; font-size: 10px;">&nbspromantic&nbsp</span><span class="barcode"; style="color: black; background-color: #fff2eb; font-size: 10px;">&nbspcomedies&nbsp</span><span class="barcode"; style="color: black; background-color: #fff4ee; font-size: 10px;">&nbspof&nbsp</span><span class="barcode"; style="color: black; background-color: #fff2ec; font-size: 10px;">&nbspthe&nbsp</span><span class="barcode"; style="color: black; background-color: #fee4d8; font-size: 10px;">&nbsppast&nbsp</span><span class="barcode"; style="color: black; background-color: #fedbcc; font-size: 10px;">&nbspdecade&nbsp</span></td>
-      <td><span class="barcode"; style="color: black; background-color: #f5fafe; font-size: 10px;">&nbspone&nbsp</span><span class="barcode"; style="color: black; background-color: #f1f7fd; font-size: 10px;">&nbspof&nbsp</span><span class="barcode"; style="color: black; background-color: #f1f7fd; font-size: 10px;">&nbspthe&nbsp</span><span class="barcode"; style="color: black; background-color: #539ecd; font-size: 10px;">&nbspgreatest&nbsp</span><span class="barcode"; style="color: black; background-color: #e5eff9; font-size: 10px;">&nbspromantic&nbsp</span><span class="barcode"; style="color: black; background-color: #eaf2fb; font-size: 10px;">&nbspcomedies&nbsp</span><span class="barcode"; style="color: black; background-color: #eef5fc; font-size: 10px;">&nbspof&nbsp</span><span class="barcode"; style="color: black; background-color: #f5fafe; font-size: 10px;">&nbspthe&nbsp</span><span class="barcode"; style="color: black; background-color: #ebf3fb; font-size: 10px;">&nbsppast&nbsp</span><span class="barcode"; style="color: black; background-color: #e7f0fa; font-size: 10px;">&nbspdecade&nbsp</span></td>
+      <td><span class="barcode" ;
+          style="color: black; background-color: #fff2ec; font-size: 10px;">&nbspone&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fff3ed; font-size: 10px;">&nbspof&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fff2ec; font-size: 10px;">&nbspthe&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #f24633; font-size: 10px;">&nbspgreatest&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #feeae1; font-size: 10px;">&nbspromantic&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #fff2eb; font-size: 10px;">&nbspcomedies&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fff4ee; font-size: 10px;">&nbspof&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fff2ec; font-size: 10px;">&nbspthe&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fee4d8; font-size: 10px;">&nbsppast&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fedbcc; font-size: 10px;">&nbspdecade&nbsp</span>
+      </td>
+      <td><span class="barcode" ;
+          style="color: black; background-color: #f5fafe; font-size: 10px;">&nbspone&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #f1f7fd; font-size: 10px;">&nbspof&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #f1f7fd; font-size: 10px;">&nbspthe&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #539ecd; font-size: 10px;">&nbspgreatest&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #e5eff9; font-size: 10px;">&nbspromantic&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #eaf2fb; font-size: 10px;">&nbspcomedies&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #eef5fc; font-size: 10px;">&nbspof&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #f5fafe; font-size: 10px;">&nbspthe&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #ebf3fb; font-size: 10px;">&nbsppast&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #e7f0fa; font-size: 10px;">&nbspdecade&nbsp</span>
+      </td>
     </tr>
     <tr>
       <td>Pos.</td>
       <td>Pos.</td>
       <td>Yes</td>
-      <td><span class="barcode"; style="color: black; background-color: #ffece3; font-size: 10px;">&nbspan&nbsp</span><span class="barcode"; style="color: black; background-color: #fcad90; font-size: 10px;">&nbspoffbeat&nbsp</span><span class="barcode"; style="color: black; background-color: #fff0e9; font-size: 10px;">&nbspromantic&nbsp</span><span class="barcode"; style="color: black; background-color: #fff4ef; font-size: 10px;">&nbspcomedy&nbsp</span><span class="barcode"; style="color: black; background-color: #fff4ef; font-size: 10px;">&nbspwith&nbsp</span><span class="barcode"; style="color: black; background-color: #fff2ec; font-size: 10px;">&nbspa&nbsp</span><span class="barcode"; style="color: black; background-color: #fcc2aa; font-size: 10px;">&nbspgreat&nbsp</span><span class="barcode"; style="color: black; background-color: #fee6da; font-size: 10px;">&nbspmeet&nbsp</span><span class="barcode"; style="color: black; background-color: #fdd3c1; font-size: 10px;">&nbspcute&nbsp</span><span class="barcode"; style="color: black; background-color: #fee5d8; font-size: 10px;">&nbspgimmick&nbsp</span></td>
-      <td><span class="barcode"; style="color: black; background-color: #f2f8fd; font-size: 10px;">&nbspan&nbsp</span><span class="barcode"; style="color: black; background-color: #d0e1f2; font-size: 10px;">&nbspoffbeat&nbsp</span><span class="barcode"; style="color: black; background-color: #f6faff; font-size: 10px;">&nbspromantic&nbsp</span><span class="barcode"; style="color: black; background-color: #eff6fc; font-size: 10px;">&nbspcomedy&nbsp</span><span class="barcode"; style="color: black; background-color: #eff6fc; font-size: 10px;">&nbspwith&nbsp</span><span class="barcode"; style="color: black; background-color: #f7fbff; font-size: 10px;">&nbspa&nbsp</span><span class="barcode"; style="color: black; background-color: #cde0f1; font-size: 10px;">&nbspgreat&nbsp</span><span class="barcode"; style="color: black; background-color: #d7e6f5; font-size: 10px;">&nbspmeet&nbsp</span><span class="barcode"; style="color: black; background-color: #dbe9f6; font-size: 10px;">&nbspcute&nbsp</span><span class="barcode"; style="color: black; background-color: #d6e6f4; font-size: 10px;">&nbspgimmick&nbsp</span></td>
+      <td><span class="barcode" ;
+          style="color: black; background-color: #ffece3; font-size: 10px;">&nbspan&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fcad90; font-size: 10px;">&nbspoffbeat&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #fff0e9; font-size: 10px;">&nbspromantic&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #fff4ef; font-size: 10px;">&nbspcomedy&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #fff4ef; font-size: 10px;">&nbspwith&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #fff2ec; font-size: 10px;">&nbspa&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fcc2aa; font-size: 10px;">&nbspgreat&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #fee6da; font-size: 10px;">&nbspmeet&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #fdd3c1; font-size: 10px;">&nbspcute&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #fee5d8; font-size: 10px;">&nbspgimmick&nbsp</span></td>
+      <td><span class="barcode" ;
+          style="color: black; background-color: #f2f8fd; font-size: 10px;">&nbspan&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #d0e1f2; font-size: 10px;">&nbspoffbeat&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #f6faff; font-size: 10px;">&nbspromantic&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #eff6fc; font-size: 10px;">&nbspcomedy&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #eff6fc; font-size: 10px;">&nbspwith&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #f7fbff; font-size: 10px;">&nbspa&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #cde0f1; font-size: 10px;">&nbspgreat&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #d7e6f5; font-size: 10px;">&nbspmeet&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #dbe9f6; font-size: 10px;">&nbspcute&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #d6e6f4; font-size: 10px;">&nbspgimmick&nbsp</span></td>
     </tr>
     <tr>
       <td>Pos.</td>
       <td>Pos.</td>
       <td>Yes</td>
-      <td><span class="barcode"; style="color: black; background-color: #fff2eb; font-size: 10px;">&nbspa&nbsp</span><span class="barcode"; style="color: black; background-color: #fff1ea; font-size: 10px;">&nbspfilm&nbsp</span><span class="barcode"; style="color: black; background-color: #fff4ee; font-size: 10px;">&nbspof&nbsp</span><span class="barcode"; style="color: black; background-color: #fc9e80; font-size: 10px;">&nbspprecious&nbsp</span><span class="barcode"; style="color: black; background-color: #fc9373; font-size: 10px;">&nbspartfully&nbsp</span><span class="barcode"; style="color: black; background-color: #fff3ed; font-size: 10px;">&nbspas&nbsp</span><span class="barcode"; style="color: black; background-color: #fdcbb6; font-size: 10px;">&nbspeveryday&nbsp</span><span class="barcode"; style="color: black; background-color: #fff1ea; font-size: 10px;">&nbspactivities&nbsp</span></td>
-      <td><span class="barcode"; style="color: black; background-color: #f2f7fd; font-size: 10px;">&nbspa&nbsp</span><span class="barcode"; style="color: black; background-color: #eaf3fb; font-size: 10px;">&nbspfilm&nbsp</span><span class="barcode"; style="color: black; background-color: #f3f8fe; font-size: 10px;">&nbspof&nbsp</span><span class="barcode"; style="color: black; background-color: #f6faff; font-size: 10px;">&nbspprecious&nbsp</span><span class="barcode"; style="color: black; background-color: #81badb; font-size: 10px;">&nbspartfully&nbsp</span><span class="barcode"; style="color: black; background-color: #f3f8fe; font-size: 10px;">&nbspas&nbsp</span><span class="barcode"; style="color: black; background-color: #a0cbe2; font-size: 10px;">&nbspeveryday&nbsp</span><span class="barcode"; style="color: black; background-color: #eef5fc; font-size: 10px;">&nbspactivities&nbsp</span></td>
+      <td><span class="barcode" ;
+          style="color: black; background-color: #fff2eb; font-size: 10px;">&nbspa&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fff1ea; font-size: 10px;">&nbspfilm&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fff4ee; font-size: 10px;">&nbspof&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fc9e80; font-size: 10px;">&nbspprecious&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #fc9373; font-size: 10px;">&nbspartfully&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fff3ed; font-size: 10px;">&nbspas&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #fdcbb6; font-size: 10px;">&nbspeveryday&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #fff1ea; font-size: 10px;">&nbspactivities&nbsp</span></td>
+      <td><span class="barcode" ;
+          style="color: black; background-color: #f2f7fd; font-size: 10px;">&nbspa&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #eaf3fb; font-size: 10px;">&nbspfilm&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #f3f8fe; font-size: 10px;">&nbspof&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #f6faff; font-size: 10px;">&nbspprecious&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #81badb; font-size: 10px;">&nbspartfully&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #f3f8fe; font-size: 10px;">&nbspas&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #a0cbe2; font-size: 10px;">&nbspeveryday&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #eef5fc; font-size: 10px;">&nbspactivities&nbsp</span></td>
     </tr>
     <tr>
       <td>Neg.</td>
       <td>Neg.</td>
       <td>Yes</td>
-      <td><span class="barcode"; style="color: black; background-color: #fff0e8; font-size: 10px;">&nbspit&nbsp</span><span class="barcode"; style="color: black; background-color: #fedccd; font-size: 10px;">&nbsps&nbsp</span><span class="barcode"; style="color: black; background-color: #fdd3c1; font-size: 10px;">&nbspnot&nbsp</span><span class="barcode"; style="color: black; background-color: #fcb296; font-size: 10px;">&nbsphorrible&nbsp</span><span class="barcode"; style="color: black; background-color: #ffeee6; font-size: 10px;">&nbspjust&nbsp</span><span class="barcode"; style="color: black; background-color: #fdc7b2; font-size: 10px;">&nbsphorribly&nbsp</span><span class="barcode"; style="color: black; background-color: #fee1d3; font-size: 10px;">&nbspmediocre&nbsp</span></td>
-      <td><span class="barcode"; style="color: black; background-color: #ecf4fb; font-size: 10px;">&nbspit&nbsp</span><span class="barcode"; style="color: black; background-color: #e9f2fa; font-size: 10px;">&nbsps&nbsp</span><span class="barcode"; style="color: black; background-color: #e7f0fa; font-size: 10px;">&nbspnot&nbsp</span><span class="barcode"; style="color: black; background-color: #97c6df; font-size: 10px;">&nbsphorrible&nbsp</span><span class="barcode"; style="color: black; background-color: #f6faff; font-size: 10px;">&nbspjust&nbsp</span><span class="barcode"; style="color: black; background-color: #d0e1f2; font-size: 10px;">&nbsphorribly&nbsp</span><span class="barcode"; style="color: black; background-color: #d1e2f3; font-size: 10px;">&nbspmediocre&nbsp</span></td>
+      <td><span class="barcode" ;
+          style="color: black; background-color: #fff0e8; font-size: 10px;">&nbspit&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fedccd; font-size: 10px;">&nbsps&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fdd3c1; font-size: 10px;">&nbspnot&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fcb296; font-size: 10px;">&nbsphorrible&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #ffeee6; font-size: 10px;">&nbspjust&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #fdc7b2; font-size: 10px;">&nbsphorribly&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fee1d3; font-size: 10px;">&nbspmediocre&nbsp</span>
+      </td>
+      <td><span class="barcode" ;
+          style="color: black; background-color: #ecf4fb; font-size: 10px;">&nbspit&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #e9f2fa; font-size: 10px;">&nbsps&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #e7f0fa; font-size: 10px;">&nbspnot&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #97c6df; font-size: 10px;">&nbsphorrible&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #f6faff; font-size: 10px;">&nbspjust&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #d0e1f2; font-size: 10px;">&nbsphorribly&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #d1e2f3; font-size: 10px;">&nbspmediocre&nbsp</span>
+      </td>
     </tr>
     <tr>
       <td>Neg.</td>
       <td>Neg.</td>
       <td>Yes</td>
-      <td><span class="barcode"; style="color: black; background-color: #feeae0; font-size: 10px;">&nbspwatching&nbsp</span><span class="barcode"; style="color: black; background-color: #fff3ed; font-size: 10px;">&nbspthis&nbsp</span><span class="barcode"; style="color: black; background-color: #fff1ea; font-size: 10px;">&nbspfilm&nbsp</span><span class="barcode"; style="color: black; background-color: #ffeee7; font-size: 10px;">&nbspnearly&nbsp</span><span class="barcode"; style="color: black; background-color: #f34c37; font-size: 10px;">&nbspprovoked&nbsp</span><span class="barcode"; style="color: black; background-color: #fdd5c4; font-size: 10px;">&nbspme&nbsp</span><span class="barcode"; style="color: black; background-color: #fff2eb; font-size: 10px;">&nbspto&nbsp</span><span class="barcode"; style="color: black; background-color: #fff2ec; font-size: 10px;">&nbsptake&nbsp</span><span class="barcode"; style="color: black; background-color: #fff2ec; font-size: 10px;">&nbspmy&nbsp</span><span class="barcode"; style="color: black; background-color: #fff2ec; font-size: 10px;">&nbspown&nbsp</span><span class="barcode"; style="color: black; background-color: #fff0e8; font-size: 10px;">&nbsplife&nbsp</span></td>
-      <td><span class="barcode"; style="color: black; background-color: #f5fafe; font-size: 10px;">&nbspwatching&nbsp</span><span class="barcode"; style="color: black; background-color: #f5f9fe; font-size: 10px;">&nbspthis&nbsp</span><span class="barcode"; style="color: black; background-color: #eff6fc; font-size: 10px;">&nbspfilm&nbsp</span><span class="barcode"; style="color: black; background-color: #e6f0f9; font-size: 10px;">&nbspnearly&nbsp</span><span class="barcode"; style="color: black; background-color: #61a7d2; font-size: 10px;">&nbspprovoked&nbsp</span><span class="barcode"; style="color: black; background-color: #dfebf7; font-size: 10px;">&nbspme&nbsp</span><span class="barcode"; style="color: black; background-color: #f7fbff; font-size: 10px;">&nbspto&nbsp</span><span class="barcode"; style="color: black; background-color: #e9f2fa; font-size: 10px;">&nbsptake&nbsp</span><span class="barcode"; style="color: black; background-color: #f1f7fd; font-size: 10px;">&nbspmy&nbsp</span><span class="barcode"; style="color: black; background-color: #f5f9fe; font-size: 10px;">&nbspown&nbsp</span><span class="barcode"; style="color: black; background-color: #e9f2fa; font-size: 10px;">&nbsplife&nbsp</span></td>
+      <td><span class="barcode" ;
+          style="color: black; background-color: #feeae0; font-size: 10px;">&nbspwatching&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fff3ed; font-size: 10px;">&nbspthis&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fff1ea; font-size: 10px;">&nbspfilm&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #ffeee7; font-size: 10px;">&nbspnearly&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #f34c37; font-size: 10px;">&nbspprovoked&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fdd5c4; font-size: 10px;">&nbspme&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fff2eb; font-size: 10px;">&nbspto&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fff2ec; font-size: 10px;">&nbsptake&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fff2ec; font-size: 10px;">&nbspmy&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fff2ec; font-size: 10px;">&nbspown&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fff0e8; font-size: 10px;">&nbsplife&nbsp</span></td>
+      <td><span class="barcode" ;
+          style="color: black; background-color: #f5fafe; font-size: 10px;">&nbspwatching&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #f5f9fe; font-size: 10px;">&nbspthis&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #eff6fc; font-size: 10px;">&nbspfilm&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #e6f0f9; font-size: 10px;">&nbspnearly&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #61a7d2; font-size: 10px;">&nbspprovoked&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #dfebf7; font-size: 10px;">&nbspme&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #f7fbff; font-size: 10px;">&nbspto&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #e9f2fa; font-size: 10px;">&nbsptake&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #f1f7fd; font-size: 10px;">&nbspmy&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #f5f9fe; font-size: 10px;">&nbspown&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #e9f2fa; font-size: 10px;">&nbsplife&nbsp</span></td>
     </tr>
     <tr>
       <td>Neg.</td>
       <td>Neg.</td>
       <td>Yes</td>
-      <td><span class="barcode"; style="color: black; background-color: #fdd2bf; font-size: 10px;">&nbsptoo&nbsp</span><span class="barcode"; style="color: black; background-color: #fca689; font-size: 10px;">&nbspbad&nbsp</span><span class="barcode"; style="color: black; background-color: #fff2ec; font-size: 10px;">&nbspthe&nbsp</span><span class="barcode"; style="color: black; background-color: #fee3d6; font-size: 10px;">&nbspformer&nbsp</span><span class="barcode"; style="color: black; background-color: #fff3ed; font-size: 10px;">&nbspmurphy&nbsp</span><span class="barcode"; style="color: black; background-color: #ffeee6; font-size: 10px;">&nbspbrown&nbsp</span><span class="barcode"; style="color: black; background-color: #fff0e9; font-size: 10px;">&nbspdoes&nbsp</span><span class="barcode"; style="color: black; background-color: #fcc2aa; font-size: 10px;">&nbspn&nbsp</span><span class="barcode"; style="color: black; background-color: #fff0e8; font-size: 10px;">&nbspt&nbsp</span><span class="barcode"; style="color: black; background-color: #fff4ee; font-size: 10px;">&nbsppop&nbsp</span><span class="barcode"; style="color: black; background-color: #fff4ee; font-size: 10px;">&nbspreese&nbsp</span><span class="barcode"; style="color: black; background-color: #fff4ee; font-size: 10px;">&nbspback&nbsp</span></td>
-      <td><span class="barcode"; style="color: black; background-color: #d9e8f5; font-size: 10px;">&nbsptoo&nbsp</span><span class="barcode"; style="color: black; background-color: #85bcdc; font-size: 10px;">&nbspbad&nbsp</span><span class="barcode"; style="color: black; background-color: #f3f8fe; font-size: 10px;">&nbspthe&nbsp</span><span class="barcode"; style="color: black; background-color: #f1f7fd; font-size: 10px;">&nbspformer&nbsp</span><span class="barcode"; style="color: black; background-color: #ebf3fb; font-size: 10px;">&nbspmurphy&nbsp</span><span class="barcode"; style="color: black; background-color: #f6faff; font-size: 10px;">&nbspbrown&nbsp</span><span class="barcode"; style="color: black; background-color: #f2f8fd; font-size: 10px;">&nbspdoes&nbsp</span><span class="barcode"; style="color: black; background-color: #d4e4f4; font-size: 10px;">&nbspn&nbsp</span><span class="barcode"; style="color: black; background-color: #edf4fc; font-size: 10px;">&nbspt&nbsp</span><span class="barcode"; style="color: black; background-color: #f4f9fe; font-size: 10px;">&nbsppop&nbsp</span><span class="barcode"; style="color: black; background-color: #f4f9fe; font-size: 10px;">&nbspreese&nbsp</span><span class="barcode"; style="color: black; background-color: #f6faff; font-size: 10px;">&nbspback&nbsp</span></td>
+      <td><span class="barcode" ;
+          style="color: black; background-color: #fdd2bf; font-size: 10px;">&nbsptoo&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fca689; font-size: 10px;">&nbspbad&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fff2ec; font-size: 10px;">&nbspthe&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fee3d6; font-size: 10px;">&nbspformer&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #fff3ed; font-size: 10px;">&nbspmurphy&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #ffeee6; font-size: 10px;">&nbspbrown&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #fff0e9; font-size: 10px;">&nbspdoes&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #fcc2aa; font-size: 10px;">&nbspn&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fff0e8; font-size: 10px;">&nbspt&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fff4ee; font-size: 10px;">&nbsppop&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fff4ee; font-size: 10px;">&nbspreese&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #fff4ee; font-size: 10px;">&nbspback&nbsp</span></td>
+      <td><span class="barcode" ;
+          style="color: black; background-color: #d9e8f5; font-size: 10px;">&nbsptoo&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #85bcdc; font-size: 10px;">&nbspbad&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #f3f8fe; font-size: 10px;">&nbspthe&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #f1f7fd; font-size: 10px;">&nbspformer&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #ebf3fb; font-size: 10px;">&nbspmurphy&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #f6faff; font-size: 10px;">&nbspbrown&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #f2f8fd; font-size: 10px;">&nbspdoes&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #d4e4f4; font-size: 10px;">&nbspn&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #edf4fc; font-size: 10px;">&nbspt&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #f4f9fe; font-size: 10px;">&nbsppop&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #f4f9fe; font-size: 10px;">&nbspreese&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #f6faff; font-size: 10px;">&nbspback&nbsp</span></td>
     </tr>
     <tr>
       <td>Neg.</td>
       <td>Neg.</td>
       <td>Yes</td>
-      <td><span class="barcode"; style="color: black; background-color: #fb7656; font-size: 10px;">&nbspunfortunately&nbsp</span><span class="barcode"; style="color: black; background-color: #fff1ea; font-size: 10px;">&nbspthe&nbsp</span><span class="barcode"; style="color: black; background-color: #fff1ea; font-size: 10px;">&nbsppicture&nbsp</span><span class="barcode"; style="color: black; background-color: #fca285; font-size: 10px;">&nbspfailed&nbsp</span><span class="barcode"; style="color: black; background-color: #fff0e9; font-size: 10px;">&nbspto&nbsp</span><span class="barcode"; style="color: black; background-color: #fee8dd; font-size: 10px;">&nbspcapture&nbsp</span><span class="barcode"; style="color: black; background-color: #ffede5; font-size: 10px;">&nbspme&nbsp</span></td>
-      <td><span class="barcode"; style="color: black; background-color: #60a7d2; font-size: 10px;">&nbspunfortunately&nbsp</span><span class="barcode"; style="color: black; background-color: #f1f7fd; font-size: 10px;">&nbspthe&nbsp</span><span class="barcode"; style="color: black; background-color: #f6faff; font-size: 10px;">&nbsppicture&nbsp</span><span class="barcode"; style="color: black; background-color: #a3cce3; font-size: 10px;">&nbspfailed&nbsp</span><span class="barcode"; style="color: black; background-color: #f5fafe; font-size: 10px;">&nbspto&nbsp</span><span class="barcode"; style="color: black; background-color: #f1f7fd; font-size: 10px;">&nbspcapture&nbsp</span><span class="barcode"; style="color: black; background-color: #f2f8fd; font-size: 10px;">&nbspme&nbsp</span></td>
+      <td><span class="barcode" ;
+          style="color: black; background-color: #fb7656; font-size: 10px;">&nbspunfortunately&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #fff1ea; font-size: 10px;">&nbspthe&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #fff1ea; font-size: 10px;">&nbsppicture&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #fca285; font-size: 10px;">&nbspfailed&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #fff0e9; font-size: 10px;">&nbspto&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #fee8dd; font-size: 10px;">&nbspcapture&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #ffede5; font-size: 10px;">&nbspme&nbsp</span></td>
+      <td><span class="barcode" ;
+          style="color: black; background-color: #60a7d2; font-size: 10px;">&nbspunfortunately&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #f1f7fd; font-size: 10px;">&nbspthe&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #f6faff; font-size: 10px;">&nbsppicture&nbsp</span><span
+          class="barcode" ;
+          style="color: black; background-color: #a3cce3; font-size: 10px;">&nbspfailed&nbsp</span><span class="barcode"
+          ; style="color: black; background-color: #f5fafe; font-size: 10px;">&nbspto&nbsp</span><span class="barcode" ;
+          style="color: black; background-color: #f1f7fd; font-size: 10px;">&nbspcapture&nbsp</span><span
+          class="barcode" ; style="color: black; background-color: #f2f8fd; font-size: 10px;">&nbspme&nbsp</span></td>
     </tr>
   </tbody>
 </table>
+
 <section class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
