@@ -80,7 +80,7 @@ Evaluating the proposed techniques, we obtained the following findings concernin
 
 Especially, our Attention iAT demonstrated the best performance in nine out of ten tasks and more interpretable attention, i.e., resulting attention weight correlated more strongly with the gradient-based word importance.
 
-{{<image src="/media/logo_hosei.png" alt="Hosei University" max_width="30">}}
+{{<image src="./media/logo_hosei.png" alt="Hosei University" max_width="30">}}
 
 [^1]: D. Bahdanau, K. Cho, and Y. Bengio, “Neural machine translation by jointly learning to align and translate,” CoRR preprint arXiv:1409.0473,2014.
 
