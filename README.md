@@ -81,7 +81,7 @@ CUDA_VISIBLE_DEVICES=0 GPU=0 allennlp train \
 
 ```shell
 # For CNN
-$ CUDA_VISIBLE_DEVICES=0 GPU=0 allennlp train \
+CUDA_VISIBLE_DEVICES=0 GPU=0 allennlp train \
     config/cnn/train.jsonnet \
     -s output/cnn/vanilla
 ```
