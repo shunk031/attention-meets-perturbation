@@ -1,0 +1,30 @@
+name: Demo Page Build
+
+on:
+  push:
+    paths:
+      - "docs/**"
+      - ".github/workflows/**"
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: "latest"
+          extended: true
+
+      - name: Build
+        run: cd docs && hugo
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+        with:
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          publish_dir: ./public
+          publish_branch: gh-pages # deploying branch
