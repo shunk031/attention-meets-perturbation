@@ -1,37 +1,119 @@
 # Attention Meets Perturbation: Robust and Interpretable Attention with Adversarial Training
 
-[![](http://img.shields.io/badge/cs.CL-arXiv%3A2009.12064-B31B1B.svg)](http://arxiv.org/abs/2009.12064)
-![Python 3.7](https://img.shields.io/badge/python-3.7%2B-brightgreen.svg)
-[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
-[![Powered by AllenNLP](https://img.shields.io/badge/Powered%20by-AllenNLP-blue.svg)](https://github.com/allenai/allennlp)
+[![CoRR preprint arXiv:2009.12064](http://img.shields.io/badge/cs.AI-arXiv%3A2009.12064-B31B1B.svg)](http://arxiv.org/abs/2009.12064)
+[![IEEE Access](https://img.shields.io/badge/Accepted-IEEE%20Access-%2300629B%09)](https://doi.org/10.1109/ACCESS.2021.3093456)
+[![Demo Page Build](https://github.com/shunk031/attention-meets-perturbation/actions/workflows/gh-pages.yml/badge.svg)](https://github.com/shunk031/attention-meets-perturbation/actions/workflows/gh-pages.yml)
 
-| | |
-|------|------|
+|                                        |                                           |
+|----------------------------------------|-------------------------------------------|
 | ![model](./.github/assets/BC-model.png)| ![Figure 1](./.github/assets/figure1.png) |
 
 **Attention Meets Perturbation: Robust and Interpretable Attention with Adversarial Training**  
 Shunsuke Kitada and Hitoshi Iyatomi
 
-Preprint: https://arxiv.org/abs/2009.12064
+- Preprint: https://arxiv.org/abs/2009.12064
+- Accepted for publication in the [IEEE Access](https://doi.org/10.1109/ACCESS.2021.3093456).
 
-Abstract: *In recent years, deep learning models have placed more emphasis on the interpretability and robustness of models. The attention mechanism is an important technique that contributes to these elements and is widely used, especially in the natural language processing (NLP) field. Adversarial training (AT) is a powerful regularization technique for enhancing the robustness of neural networks and has been successful in many applications. The application of AT to the attention mechanism is expected to be highly effective, but there is little research on this. In this paper, we propose a new general training technique for NLP tasks, using AT for attention (Attention AT) and more interpretable adversarial training for attention (Attention iAT). Our proposals improved both the prediction performance and interpretability of the model by applying AT to the attention mechanisms. In particular, Attention iAT enhances those advantages by introducing adversarial perturbation, which differentiates the attention of sentences where it is unclear which words are important. We performed various NLP tasks on ten open datasets and compared the performance of our techniques to a recent model using attention mechanisms. Our experiments revealed that AT for attention mechanisms, especially Attention iAT, demonstrated (1) the best prediction performance in nine out of ten tasks and (2) more interpretable attention (i.e., the resulting attention correlated more strongly with gradient-based word importance) for all tasks. Additionally, our techniques are (3) much less dependent on perturbation size in AT.*
+Abstract: *Although attention mechanisms have been applied to a variety of deep learning models and have been shown to improve the prediction performance, it has been reported to be vulnerable to perturbations to the mechanism. To overcome the vulnerability to perturbations in the mechanism, we are inspired by adversarial training (AT), which is a powerful regularization technique for enhancing the robustness of the models. In this paper, we propose a general training technique for natural language processing tasks, including AT for attention (Attention AT) and more interpretable AT for attention (Attention iAT). The proposed techniques improved the prediction performance and the model interpretability by exploiting the mechanisms with AT. In particular, Attention iAT boosts those advantages by introducing adversarial perturbation, which enhances the difference in the attention of the sentences. Evaluation experiments with ten open datasets revealed that AT for attention mechanisms, especially Attention iAT, demonstrated (1) the best performance in nine out of ten tasks and (2) more interpretable attention (i.e., the resulting attention correlated more strongly with gradient-based word importance) for all tasks. Additionally, the proposed techniques are (3) much less dependent on perturbation size in AT.*
 
-## Note
+## Install and Run the experiments
 
-This paper is under review. Source code will be revealed upon acceptance.
+![Python 3.7](https://img.shields.io/badge/python-3.7%2B-brightgreen.svg)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![Powered by AllenNLP](https://img.shields.io/badge/Powered%20by-AllenNLP-blue.svg)](https://github.com/allenai/allennlp)
+
+### Install requirements
+
+```shell
+pip install -U pip poetry setuptools
+poetry install
+```
+
+### Prepare for spaCy
+
+```shell
+python -m spacy download en
+```
+
+### Prepare dataset for the experiments
+
+- for all dataset
+
+```shell
+allennlp make-dataset all
+```
+
+- for specific dataset (e.g., SST)
+
+```shell
+allennlp make-dataset sst
+```
+
+### Run training models
+
+<details>
+  <summary>for binary classification (BC) tasks</summary>
+
+```shell
+# for SST
+CUDA_VISIBLE_DEVICES=0 GPU=0 allennlp train \
+    config/sst/train.jsonnet \
+    -s output/sst/weighted
+
+# for Newsgroups
+CUDA_VISIBLE_DEVICES=0 GPU=0 allennlp train \
+    config/newsgroups/train.jsonnet \
+    -s output/newsgroups/weighted
+
+# for IMDB
+CUDA_VISIBLE_DEVICES=0 GPU=0 allennlp train \
+    config/imdb/train.jsonnet \
+    -s output/imdb/weighted
+
+# for AGNews
+CUDA_VISIBLE_DEVICES=0 GPU=0 allennlp train \
+    config/ag_news/train.jsonnet \
+    -s output/ag_news/weighted
+```
+</details>
+
+<details>
+  <summary>for question answering (QA) tasks</summary>
+
+```shell
+# For CNN
+CUDA_VISIBLE_DEVICES=0 GPU=0 allennlp train \
+    config/cnn/train.jsonnet \
+    -s output/cnn/vanilla
+```
+</details>
+
+<details>
+  <summary>for natural language inference (NLI) tasks</summary>
+
+```shell
+# For SNLI
+$ CUDA_VISIBLE_DEVICES=9 GPU=0 allennlp train \
+    config/snli/train.jsonnet \
+    -s output/snli/vanilla
+```
+</details>
 
 ## Citation
 
-```
+```bibtex
 @article{kitada2020attention,
   title   = {Attention Meets Perturbation: Robust and Interpretable Attention with Adversarial Training},
   author  = {Shunsuke Kitada and Hitoshi Iyatomi},
-  journal = {CoRR},
-  volume  = {abs/2009.12064},
-  year    = {2020},
+  journal = {IEEE Access},
+  year={2021},
+  volume={9},
+  number={},
+  pages={92974-92985},
+  doi={10.1109/ACCESS.2021.3093456}
 }
 ```
 
 ## Reference
 
-- Kitada, Shunsuke, and Hitoshi Iyatomi. "Attention Meets Perturbation: Robust and Interpretable Attention with Adversarial Training" CoRR preprint arXiv:2009.12064 (2020).
+- S. Kitada and H. Iyatomi, "Attention Meets Perturbations: Robust and Interpretable Attention With Adversarial Training," in *IEEE Access*, vol. 9, pp. 92974-92985, 2021, doi: [10.1109/ACCESS.2021.3093456](https://doi.org/10.1109/ACCESS.2021.3093456).
