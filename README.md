@@ -101,6 +101,9 @@ $ CUDA_VISIBLE_DEVICES=9 GPU=0 allennlp train \
 
 ## Citation
 
+If you find this code or idea useful, please cite it as below.
+
+
 ```bibtex
 @article{kitada2020attention,
   title   = {Attention Meets Perturbations: Robust and Interpretable Attention with Adversarial Training},
