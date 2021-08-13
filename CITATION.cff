@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "If you find this code or idea useful, please cite it as below."
+authors:
+- family-names: "Kitada"
+  given-names: "Shunsuke"
+  orcid: "https://orcid.org/0000-0002-3330-8779"
+- family-names: "Iyatomi"
+  given-names: "Hitoshi"
+  orcid: "https://orcid.org/0000-0003-4108-4178"
+title: "Attention Meets Perturbations: Robust and Interpretable Attention With Adversarial Training"
+version: 1.0.0
+doi: 10.1109/ACCESS.2021.3093456
+date-released: 2021-06-29
+url: "https://github.com/shunk031/attention-meets-perturbation"
+
